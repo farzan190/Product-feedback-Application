@@ -12,7 +12,6 @@ function App() {
   const [title,setTitle]=useState();
   const [category,setCategory]=useState();
   const [detail,setDetail]=useState();
-  const {hello}=useContext(Cart);
       
 const addFeedBack=()=>{
   setDisplayData(...displayData,{
@@ -39,7 +38,6 @@ const filterResults=(e)=>{
          <button onClick={(e)=>addFeedBack()}>clickme</button> 
          <FeedBackForm title={title} setTitle={setTitle} category={category} setCategory={setCategory} detail={detail} setDetail={setDetail}/>
          <FilterButtons filterResults={filterResults} />
-         <div>{hello}</div>
          </div>)            
 }
 
