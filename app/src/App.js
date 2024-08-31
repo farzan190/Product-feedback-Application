@@ -1,25 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import Tab  from './Tab';
+import data from './data';
+import {useState} from "react";
+import FeedBackForm from './FeedBackForm';
+import FilterButtons from './FilterButtons';
+import { useContext } from 'react';
+import Cart from './Context';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [displayData,setDisplayData]=useState(data[0].productRequests);
+  const [title,setTitle]=useState();
+  const [category,setCategory]=useState();
+  const [detail,setDetail]=useState();
+  const {hello}=useContext(Cart);
+      
+const addFeedBack=()=>{
+  setDisplayData(...displayData,{
+    "id": 111,
+    "title": title,
+    "category": category,
+    "upvotes": 786,
+    "upvoted": false,
+    "status": "suggestion",
+    "description": detail,
+    "comments": [
+    ]
+  })
+  
+  
+ }
+
+const filterResults=(e)=>{
+  const filteredData= data[0].productRequests.filter((item)=>item.category==e.target.id);
+  setDisplayData(filteredData);
+} 
+
+  return (<div> <div>{displayData.map((i)=><Tab title={i.title} description={i.description} category={i.category} upvotes={i.upvotes}/>)}</div>;
+         <button onClick={(e)=>addFeedBack()}>clickme</button> 
+         <FeedBackForm title={title} setTitle={setTitle} category={category} setCategory={setCategory} detail={detail} setDetail={setDetail}/>
+         <FilterButtons filterResults={filterResults} />
+         <div>{hello}</div>
+         </div>)            
 }
+
 
 export default App;
