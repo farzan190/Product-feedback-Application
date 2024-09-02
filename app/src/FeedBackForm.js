@@ -1,11 +1,11 @@
 import { useState } from "react"
+import { NavLink } from "react-router-dom";
 
 const FeedBackForm=({title,setTitle,category,setCategory,detail,setDetail})=>{
     
 
     const handleChange=(e)=>{
-
-        return ;
+        return  ;
     }
 
     return (<>
@@ -17,7 +17,7 @@ const FeedBackForm=({title,setTitle,category,setCategory,detail,setDetail})=>{
       value={title}
       onChange={(e)=>setTitle(e.target.value)}/>
       
-   <h1> Category</h1>
+    <h1> Category</h1>
     <h3>Choose a category for your feedback</h3>
     <select value={category} onChange={(e)=>setCategory(e.target.value)}> 
     <option>Feature</option>
@@ -25,15 +25,15 @@ const FeedBackForm=({title,setTitle,category,setCategory,detail,setDetail})=>{
     <option>UX</option>
     <option>Enhancement</option>
     <option>Bug</option>
-
     </select>
-<h3>FeedBack Detail</h3>
-<input
+   <h3>FeedBack Detail</h3>
+    <input
       type="text"
       value={detail}
       onChange={(e)=>setDetail(e.target.value)}
       placeholder="type your feedback here"
       />
+      <NavLink to={`/`}>goBack</NavLink>
     </> 
     
     )

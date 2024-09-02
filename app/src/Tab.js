@@ -1,13 +1,24 @@
-const Tab=({title,description,category,upvotes})=>{
-    const handleOnclick=(e)=>{
-         return ;
+import { useState } from "react";
+
+const Tab=({title,description,category,upvotes,upvoted})=>{
+    const [vote,setVote]=useState(upvotes);
+    const [isVoted,setIsVoted]=useState(upvoted);
+   
+    const handleUpvote=(e)=>{
+           if(!isVoted){
+            setIsVoted(true);
+            setVote(upvotes+1);
+           }
+           if(isVoted){
+            setIsVoted(false);
+            setVote(upvotes);
+           }
     }
+
 return <div><div>{title}</div>
       <div>{description}</div>
       <div>{category}</div>
-      <button>-</button>
-      <button onClick={(e)=>handleOnclick(e)}>{upvotes}</button>
-      <button>+</button>
+      <button onClick={(e)=>handleUpvote(e)}>{vote}</button>
         
       <div>.................</div>
       </div>
