@@ -1,9 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NavLink } from "react-router-dom";
+import Cart from "./Context";
+import CommentPage from "./CommentPage";
 
-const Tab=({title,description,category,upvotes,upvoted})=>{
+const Tab=({id,title,description,category,upvotes,upvoted})=>{
     const [vote,setVote]=useState(upvotes);
     const [isVoted,setIsVoted]=useState(upvoted);
-   
+    const {selectedTab,setSelectedTab}=useContext(Cart);
+    
     const handleUpvote=(e)=>{
            if(!isVoted){
             setIsVoted(true);
@@ -14,13 +18,16 @@ const Tab=({title,description,category,upvotes,upvoted})=>{
             setVote(upvotes);
            }
     }
-
-return <div><div>{title}</div>
+    const handleTab=()=>{
+        console.log(id);
+        setSelectedTab(id);
+        
+       }
+return <div id={id} onClick={()=>handleTab()}><NavLink to={`/CommentPage`} >{title}</NavLink>
       <div>{description}</div>
       <div>{category}</div>
       <button onClick={(e)=>handleUpvote(e)}>{vote}</button>
         
-      <div>.................</div>
       </div>
 }
 

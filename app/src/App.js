@@ -14,7 +14,7 @@ function App() {
   const [title,setTitle]=useState();
   const [category,setCategory]=useState();
   const [detail,setDetail]=useState();
-  const {abc}=useContext(Cart);
+  const {selectedTab,setSelectedTab}=useContext(Cart);
       
 const addFeedBack=()=>{
   setDisplayData([...displayData,{
@@ -28,19 +28,17 @@ const addFeedBack=()=>{
     "comments": [
     ]
   }])
-  
-  
  }
 
 const filterResults=(e)=>{
-  const filteredData= data[0].productRequests.filter((item)=>item.category==e.target.id);
+  const filteredData= displayData.filter((item)=>item.category==e.target.id);
   setDisplayData(filteredData);
 } 
-
-  return (<div> <div>{displayData.map((i)=><Tab title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>;
-         <button onClick={(e)=>addFeedBack()}>clickme</button> 
+ // we ll send the id to the comment page and it will find the data with the same id  and render it 
+  return (<div> 
+         <div>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>;
+         <button onClick={()=>addFeedBack()}>clickme</button> 
          <NavLink to={`/feedback`}>feed</NavLink>
-
          <FeedBackForm title={title} setTitle={setTitle} category={category} setCategory={setCategory} detail={detail} setDetail={setDetail}/>
          <FilterButtons filterResults={filterResults} />
          </div>)            

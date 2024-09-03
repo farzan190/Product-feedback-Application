@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ContextProvider } from './Context';
 import FeedBackForm from './FeedBackForm';
-
+import CommentPage from './CommentPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -15,6 +15,8 @@ root.render(
     <Routes>
       <Route path='/' element={<App/>} />
       <Route path='/feedback' element={<FeedBackForm/>} />
+      <Route path='/CommentPage' element={<CommentPage/>} />
+
     </Routes>
     </BrowserRouter>
     </ContextProvider>
