@@ -1,6 +1,5 @@
 import './App.css';
 import Tab  from './Tab';
-import data from './data';
 import {useState} from "react";
 import FeedBackForm from './FeedBackForm';
 import FilterButtons from './FilterButtons';
@@ -10,7 +9,7 @@ import Cart from './Context';
 
 
 function App() {
-  const [displayData,setDisplayData]=useState(data[0].productRequests);
+  const {displayData,setDisplayData}=useContext(Cart);
   const [title,setTitle]=useState();
   const [category,setCategory]=useState();
   const [detail,setDetail]=useState();
@@ -32,7 +31,8 @@ const addFeedBack=()=>{
 
 const filterResults=(e)=>{
   const filteredData= displayData.filter((item)=>item.category==e.target.id);
-  setDisplayData(filteredData);
+  setDisplayData([filteredData]);
+  // the data gets displayed and now its the new data now suppose i want to , i think we need a third data 
 } 
  // we ll send the id to the comment page and it will find the data with the same id  and render it 
   return (<div> 
