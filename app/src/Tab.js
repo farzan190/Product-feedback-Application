@@ -24,8 +24,9 @@ const Tab=({id,title,description,category,upvotes,upvoted})=>{
         
        }
 return <div className="single-tab" id={id} onClick={()=>handleTab()}>
+
       <div className="left-tab">
-      <div className="vote"><button onClick={(e)=>handleUpvote(e)}>{vote}</button></div>
+      <div ><button className="vote" onClick={(e)=>handleUpvote(e)}>{vote}</button></div>
       </div>
       
        <div className="right-tab">
