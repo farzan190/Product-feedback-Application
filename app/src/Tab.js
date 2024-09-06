@@ -23,11 +23,17 @@ const Tab=({id,title,description,category,upvotes,upvoted})=>{
         setSelectedTab(id);
         
        }
-return <div id={id} onClick={()=>handleTab()}><NavLink to={`/CommentPage`} >{title}</NavLink>
-      <div>{description}</div>
-      <div>{category}</div>
-      <button onClick={(e)=>handleUpvote(e)}>{vote}</button>
-        
+return <div className="single-tab" id={id} onClick={()=>handleTab()}>
+      <div className="left-tab">
+      <div className="vote"><button onClick={(e)=>handleUpvote(e)}>{vote}</button></div>
+      </div>
+      
+       <div className="right-tab">
+       <div className="title"><NavLink to={`/CommentPage`} >{title}</NavLink></div>
+      <div className="description">{description}</div>
+      <div className="category">{category}</div>
+      </div>
+      
       </div>
 }
 

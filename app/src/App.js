@@ -32,17 +32,15 @@ const addFeedBack=()=>{
 const filterResults=(e)=>{
   const filteredData= displayData.filter((item)=>item.category==e.target.id);
   setDisplayData([filteredData]);
-  // the data gets displayed and now its the new data now suppose i want to , i think we need a third data 
 } 
- // we ll send the id to the comment page and it will find the data with the same id  and render it 
-  return (<div> 
-         <div>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>;
+  return (<div className='main-page'> 
+         <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>;
          <button onClick={()=>addFeedBack()}>clickme</button> 
          <NavLink to={`/feedback`}>feed</NavLink>
-         <FeedBackForm title={title} setTitle={setTitle} category={category} setCategory={setCategory} detail={detail} setDetail={setDetail}/>
-         <FilterButtons filterResults={filterResults} />
+        <div className='filter-buttons'> <FilterButtons filterResults={filterResults} /></div>
          </div>)            
 }
 
+//<FeedBackForm title={title} setTitle={setTitle} category={category} setCategory={setCategory} detail={detail} setDetail={setDetail}/>
 
 export default App;
