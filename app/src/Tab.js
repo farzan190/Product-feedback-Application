@@ -30,7 +30,7 @@ return <div className="single-tab" id={id} onClick={()=>handleTab()}>
       </div>
       
        <div className="right-tab">
-       <div className="title"><NavLink to={`/CommentPage`} >{title}</NavLink></div>
+       <div className="title"><NavLink className="navlink" to={`/CommentPage`} >{title}</NavLink></div>
       <div className="description">{description}</div>
       <div className="category">{category}</div>
       </div>

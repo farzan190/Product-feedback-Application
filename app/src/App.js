@@ -33,11 +33,36 @@ const filterResults=(e)=>{
   const filteredData= displayData.filter((item)=>item.category==e.target.id);
   setDisplayData([filteredData]);
 } 
-  return (<div className='main-page'> 
+  return (    <div className='board'>
+              <div className='left-board'>
+               <div className='gradient-column'>
+                <div>FrontEnd Mentor</div>
+                <div>feedback board</div>
+               </div>
+               <div className='filter-buttons'>
+                  
+               </div>
+
+              </div>
+              
+           <div className='home-page'>
+            <div className='header'>
+             <div className='suggestions-count'> 6 Suggestions</div>
+            <div className='sortby'>Sort by:</div>
+            <select className='options'>
+              <option>Most Upvotes</option>
+              <option>Least Upvotes</option>
+              <option>Most Comments</option>
+              <option>Least Comments</option>
+
+            </select>
+          <button className='Add-feedback'><div className='AddFeedBackText'>+ Add Feedback</div></button>
+            </div>
+          <div className='main-page'> 
          <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>;
          <button onClick={()=>addFeedBack()}>clickme</button> 
          <NavLink to={`/feedback`}>feed</NavLink>
-        <div className='filter-buttons'> <FilterButtons filterResults={filterResults} /></div>
+         </div></div>
          </div>)            
 }
 
