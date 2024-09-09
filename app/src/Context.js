@@ -8,8 +8,12 @@ const Cart=createContext();
    const[name,setName]=useState("farru");
   const [displayData,setDisplayData]=useState(data[0].productRequests);
    const [selectedTab,setSelectedTab]=useState(1);
-
-    return (<Cart.Provider value={{selectedTab,setSelectedTab,displayData,setDisplayData}} >
+   const [title,setTitle]=useState("");
+   const [category,setCategory]=useState("all");
+   const [detail,setDetail]=useState("");
+   const [originalData,setOriginalData]=useState(data[0].productRequests);  
+ 
+    return (<Cart.Provider value={{selectedTab,setSelectedTab,displayData,setDisplayData,title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData}} >
        {children} 
     </Cart.Provider>)
 }

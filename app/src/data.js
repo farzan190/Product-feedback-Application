@@ -8,7 +8,7 @@ const data=[{
       {
         "id": 1,
         "title": "Add tags for solutions",
-        "category": "enhancement",
+        "category": "Enhancement",
         "upvotes": 112,
         "upvoted": false,
         "status": "suggestion",
@@ -40,7 +40,7 @@ const data=[{
       {
         "id": 4,
         "title": "Add a dark theme option",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 99,
         "upvoted": false,
         "status": "suggestion",
@@ -90,7 +90,7 @@ const data=[{
       {
         "id": 7,
         "title": "Q&A within the challenge hubs",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 65,
         "upvoted": false,
         "status": "suggestion",
@@ -110,7 +110,7 @@ const data=[{
       {
         "id": 9,
         "title": "Add image/video upload to feedback",
-        "category": "enhancement",
+        "category": "Enhancement",
         "upvotes": 51,
         "upvoted": false,
         "status": "suggestion",
@@ -139,7 +139,7 @@ const data=[{
       {
         "id": 12,
         "title": "Ability to follow others",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 42,
         "upvoted": false,
         "status": "suggestion",
@@ -179,7 +179,7 @@ const data=[{
       {
         "id": 6,
         "title": "Preview images not loading",
-        "category": "bug",
+        "category": "Bug",
         "upvotes": 3,
         "upvoted": false,
         "status": "suggestion",
@@ -189,7 +189,7 @@ const data=[{
       {
         "id": 16,
         "title": "More comprehensive reports",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 123,
         "upvoted": false,
         "status": "planned",
@@ -218,7 +218,7 @@ const data=[{
       {
         "id": 19,
         "title": "Learning paths",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 28,
         "upvoted": false,
         "status": "planned",
@@ -238,7 +238,7 @@ const data=[{
       {
         "id": 20,
         "title": "One-click portfolio generation",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 62,
         "upvoted": false,
         "status": "in-progress",
@@ -258,7 +258,7 @@ const data=[{
       {
         "id": 22,
         "title": "Bookmark challenges",
-        "category": "feature",
+        "category": "Feature",
         "upvotes": 31,
         "upvoted": false,
         "status": "in-progress",
@@ -278,7 +278,7 @@ const data=[{
       {
         "id": 24,
         "title": "Animated solution screenshots",
-        "category": "bug",
+        "category": "Bug",
         "upvotes": 9,
         "upvoted": false,
         "status": "in-progress",
@@ -288,7 +288,7 @@ const data=[{
       {
         "id": 25,
         "title": "Add micro-interactions",
-        "category": "enhancement",
+        "category": "Enhancement",
         "upvotes": 71,
         "upvoted": false,
         "status": "live",

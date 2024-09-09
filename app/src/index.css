@@ -16,7 +16,9 @@
   justify-content: flex-start;
   align-items: center;
   height: 2160px;
-  margin-right: 20px; 
+  margin-top: 78px;
+  margin-right: 20px;
+  margin-bottom: auto; 
 }
 
 .gradient-column{
@@ -35,6 +37,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  margin-bottom: auto;
 }
 
 .tabs{
@@ -92,7 +95,7 @@
   align-items: center;
   justify-content: center;
   margin-top: 50px;
-  margin-left: ;
+  margin-bottom:auto ;
 }
 
 .header{
@@ -159,4 +162,32 @@
   border-radius: 10px;
   font-weight: 550;
   padding: 6px 16px;
+}
+.filter-button{
+  color: #4661e6;
+  background-color: #f2f4ff;
+  font-size: medium;
+  border-radius: 10px;
+  font-weight: 550;
+  padding: 6px 16px;
+}
+
+
+.board{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.Add-feedback{
+  text-decoration: none;
+  
+}
+.filter-buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 270px;
+  gap: 10px;
 }
