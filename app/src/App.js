@@ -35,9 +35,19 @@ const filterResults=(e)=>{
                </div>
                <div className='filter-buttons'>
         <div className='filter-buttons'> <FilterButtons filterResults={filterResults} /></div>
-                  
                </div>
+                <div className='roadmap'>
+                 <div className='roadmap-heading'>
+                  <div>Roadmap</div>
+                  <div className='view'>view</div>
+                 </div>
+                  <div className='plans-container'>
+                    <div><span className='planned-dot'></span>Planned <span>2</span></div>
+                    <div><span className='inprogress-dot'></span>In-Progress<span>3</span> </div>
+                    <div><span className='live-dot'></span>Live <span>1</span></div>
 
+                  </div>
+                </div>
               </div>
               
            <div className='home-page'>
@@ -54,7 +64,7 @@ const filterResults=(e)=>{
           <button className='Add-feedback'><NavLink className='AddFeedBackText' to={`/feedback`}>+ Add Feedback</NavLink></button>
             </div>
           <div className='main-page'> 
-         <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>;
+         <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>
          </div></div>
          </div>)            
 }

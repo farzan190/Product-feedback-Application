@@ -18,9 +18,8 @@ const CommentPage=({id})=>{
                                                          category={i.category} 
                                                          upvoted={i.upvoted} 
                                                          upvotes={i.upvotes}/>
-                                                         
+
                                                          <CommentSection comments={i.comments} />
-                                                       
                                                            </>
                                                         )
 

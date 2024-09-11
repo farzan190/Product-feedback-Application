@@ -15,21 +15,24 @@ const FeedBackForm=()=>{
         return  ;
     }
     
-    const addFeedBack=(e)=>{
-      setOriginalData([...originalData,{
-        "id": 111,
-        "title": title,
-        "category": category,
-        "upvotes": 0,
-        "upvoted": false,
-        "status": "suggestion",
-        "description": detail,
-        "comments": [
-        ]
-      }])
-       setDisplayData(originalData);
-       navigate(-1);
-     }
+    const addFeedBack = (e) => {
+      const newFeedback = {
+        id: 111,
+        title: title,
+        category: category,
+        upvotes: 0,
+        upvoted: false,
+        status: "suggestion",
+        description: detail,
+        comments: [],
+      };
+    
+      const updatedData = [...originalData, newFeedback];
+      
+      setOriginalData(updatedData);  
+      setDisplayData(updatedData);   
+      navigate(-1);                  
+    };
     return (<>
     <h1>Create New FeedBack</h1>
     <h3>Feedback Title</h3>

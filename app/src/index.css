@@ -16,7 +16,7 @@
   justify-content: flex-start;
   align-items: center;
   height: 2160px;
-  margin-top: 78px;
+  margin-top: 80px;
   margin-right: 20px;
   margin-bottom: auto; 
 }
@@ -170,6 +170,8 @@
   border-radius: 10px;
   font-weight: 550;
   padding: 6px 16px;
+  margin:2px;
+  
 }
 
 
@@ -188,6 +190,50 @@
   justify-content: center;
   align-items: center;
   margin-top: 20px;
+  border-radius: 10px;
+  background-color:white;
   width: 270px;
+  height: 200px;
   gap: 10px;
+}
+.roadmap{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+  width: 270px;
+  height: 100px;
+  border:2px solid
+}
+.roadmap-heading{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  border: 2px solid;
+  margin-bottom: 24px;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: #3a4374;
+}
+.view{
+  font: x-small;
+}
+
+.planned-dot{
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: black;
+
+}
+
+.plans-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  border: 2px solid;
+  justify-content: space-between;
+  
 }
