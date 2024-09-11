@@ -47,7 +47,7 @@ const Comment=({id,name,userName,content,replies})=>{
         };
       });
           setOriginalData(updatedData);
-          setDisplayData(originalData);
+          setDisplayData(updatedData);
     }
      
     return <div>
