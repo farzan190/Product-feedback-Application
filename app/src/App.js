@@ -18,10 +18,17 @@ function App() {
   const {originalData,setOriginalData}=useContext(Cart);    
 
 
+const sorting=(e)=>{
+//most upvotes ,most comments
+}
+
+
 
 const filterResults=(e)=>{
   if(e.target.id=="All"){
-     return;
+    console.log(originalData);
+     setDisplayData(originalData);
+     return ;
   }
   const filteredData= originalData.filter((item)=>item.category==e.target.id);
   setDisplayData(filteredData);
