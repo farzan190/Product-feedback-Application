@@ -18,15 +18,46 @@ function App() {
   const {originalData,setOriginalData}=useContext(Cart);    
 
 
-const sorting=(e)=>{
-//most upvotes ,most comments
-}
+//const handleSorting=(e)=>{
+  //   console.log(e.target.value);
 
+//}
+const setSortByHandler = (e) => {
+  if(e.target.value=="Most Upvotes") {
+      console.log(true);
+      const sortedData= displayData.sort((a, b) => b.upvotes - a.upvotes);
+      console.log(sortedData);
+      const instaData=[...sortedData];
+      setDisplayData(instaData);
+  }
+  if (e.target.value=="Least Upvotes"){
+      console.log(true);
+       const sortedData= displayData.sort((a, b) => a.upvotes - b.upvotes);
+       const instaData=[...sortedData];
+      setDisplayData(instaData);
+    }
+  if ('Most Comments'==e.target.value)
+  { console.log(true);
+    const sortedData=displayData.sort((a, b) => b.comments.length - a.comments.length);
+    console.log(sortedData);
+    const instaData=[...sortedData];
+    setDisplayData(instaData);
+   }
+  if ('Least Comments'==e.target.value)
+   {   console.log(true);
+      const sortedData= displayData.sort((a, b) => a.comments.length - b.comments.length);
+      console.log(sortedData);
+    const instaData=[...sortedData];
+       setDisplayData(instaData);
+   }
+      
+
+   
+};
 
 
 const filterResults=(e)=>{
   if(e.target.id=="All"){
-    console.log(originalData);
      setDisplayData(originalData);
      return ;
   }
@@ -61,7 +92,7 @@ const filterResults=(e)=>{
             <div className='header'>
              <div className='suggestions-count'> 6 Suggestions</div>
             <div className='sortby'>Sort by:</div>
-            <select className='options'>
+            <select className='options' onClick={(e)=>setSortByHandler(e)}>
               <option>Most Upvotes</option>
               <option>Least Upvotes</option>
               <option>Most Comments</option>
