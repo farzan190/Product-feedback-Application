@@ -102,8 +102,10 @@ const data=[{
             "user": {
               "image": "./assets/user-images/image-george.jpg",
               "name": "George Partridge",
-              "username": "soccerviewer8"
-            }
+              "username": "soccerviewer8",
+            },
+            "replies":[],
+
           }
         ]
       },
@@ -172,7 +174,9 @@ const data=[{
               "image": "./assets/user-images/image-jackson.jpg",
               "name": "Jackson Barker",
               "username": "countryspirit"
-            }
+            },
+            "replies":[],
+            
           }
         ]
       },
@@ -271,7 +275,9 @@ const data=[{
               "image": "./assets/user-images/image-suzanne.jpg",
               "name": "Suzanne Chang",
               "username": "upbeat1811"
-            }
+            },
+            "replies":[],
+
           }
         ]
       },

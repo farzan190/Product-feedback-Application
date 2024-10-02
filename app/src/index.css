@@ -123,7 +123,6 @@
 
 
 .Add-feedback{
-  color: white;
   background-color: #ad1fea;
   width: 150px;
   height: 45px;
@@ -235,5 +234,106 @@
   width: 250px;
   border: 2px solid;
   justify-content: space-between;
+  
+}
+
+
+
+.addfeedback-form{
+  border-radius: 10px;
+  margin: 50px auto;
+ height: 100vh;
+ width: 550px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ gap: 10px;
+}
+
+
+.createfeedback{
+  font-size: 1.5rem;
+  font-family: "Jost", sans-serif;
+  line-height: 35px;
+  color: #3a4374;
+  margin: 24px 0 40px;
+}
+
+.title-description{
+  margin-bottom: 24px;
+  color: #3a4374;
+
+}
+
+.category-section{
+  color: #3a4374;
+
+  margin-bottom: 24px;
+}
+
+.feedback-detail{
+  margin-bottom: 24px;
+  color: #3a4374;
+  
+}
+input{
+ width: 500px;
+ height: 20px;
+ padding: 13px 24px;
+ border-radius: 5px;
+}
+
+.categoryoptions{
+  width: 500px;
+  padding: 13px 24px;
+  border-radius: 5px;
+}
+
+.feedback-title{
+  font-weight: 700;
+
+}
+
+.cat{
+  font-weight: 700;
+
+}
+.FD{
+  font-weight: 700;
+  margin: 2px 0 16px;
+
+}
+
+.feedback-description{
+  color: #647196;
+  margin: 2px 0 16px;
+
+}
+.chooseACat{
+  color: #647196;
+  margin: 2px 0 16px;
+}
+.FD-desc{
+  color: #647196;
+  margin: 2px 0 16px;
+
+}
+
+.feedbackdescription{
+  padding: 16px 24px 20px;
+  height: 80px;
+
+}
+
+.addFeedback-button{
+  background-color: #ad1fea;;
+  padding: 10px 5px;
+  border-radius: 5px;
+  font-weight: 700;
+   letter-spacing: 1px;
+  color: white;
+  width: 140px;
+  height: 45px;
   
 }

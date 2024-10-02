@@ -33,20 +33,28 @@ const FeedBackForm=()=>{
       setDisplayData(updatedData);   
       navigate(-1);                  
     };
-    return (<>
-    <h1>Create New FeedBack</h1>
-    <h3>Feedback Title</h3>
-    <div>Add a short, descriptive headline</div>
+    return (
+    <div className="addfeedback-form">
+     
+     <div>
+     <NavLink to={`/`}> goBack</NavLink>
+
+    <h1 className="createfeedback">Create New FeedBack</h1>
+    <div className="title-description">
+    <div className="feedback-title">Feedback Title</div>
+    <div className="feedback-description" >Add a short, descriptive headline</div>
       <input
       type="text"
       value={title}
       placeholder="please type feedback"
       onChange={(e)=>setTitle(e.target.value)}
       />
-      
-    <h1> Category</h1>
-    <h3>Choose a category for your feedback</h3>
-    <select value={category} onChange={(e)=>setCategory(e.target.value)}> 
+    </div>
+
+     <div className="category-section"> 
+    <div className="cat"> Category</div>
+    <div className="chooseACat">Choose a category for your feedback</div>
+    <select className="categoryoptions" value={category} onChange={(e)=>setCategory(e.target.value)}> 
     <option>All</option>
     <option>Feature</option>
     <option>UI</option>
@@ -54,17 +62,21 @@ const FeedBackForm=()=>{
     <option>Enhancement</option>
     <option>Bug</option>
     </select>
-   <h3>FeedBack Detail</h3>
+    </div>
+   <div className="feedback-detail">
+   <div className="FD">FeedBack Detail</div>
+   <div className="FD-desc">Include any specific comments on what should be improved, added, etc.</div>
     <input
+    className="feedbackdescription"
       type="text"
       value={detail}
       onChange={(e)=>setDetail(e.target.value)}
       placeholder="type your feedback here"
       />
-      <button onClick={(e)=>addFeedBack(e)}>AddFeedBack</button>
-      <NavLink to={`/`}>goBack</NavLink>
-    </> 
-    
+      </div>
+      <button className="addFeedback-button" onClick={(e)=>addFeedBack(e)}>AddFeedBack</button>
+      </div> 
+    </div> 
     )
 }
 

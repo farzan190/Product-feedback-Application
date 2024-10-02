@@ -18,10 +18,7 @@ function App() {
   const {originalData,setOriginalData}=useContext(Cart);    
 
 
-//const handleSorting=(e)=>{
-  //   console.log(e.target.value);
 
-//}
 const setSortByHandler = (e) => {
   if(e.target.value=="Most Upvotes") {
       console.log(true);
@@ -104,7 +101,7 @@ const filterResults=(e)=>{
           <div className='main-page'> 
          <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>
          </div></div>
-         </div>)            
+              </div>)            
 }
 
 //

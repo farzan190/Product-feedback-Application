@@ -51,17 +51,18 @@ const Comment=({id,name,userName,content,replies})=>{
     }
      
     return <div>
-    <hr/>
-    <div>{name}</div>
-    <strong>@{userName}</strong>
-    <div>{content}</div>
-    <div onClick={()=>handleReply()}>Reply</div>
-    <div >{reply && <> <input type="text" placeholder="type your comment here " value={val} onChange={(e)=>handleVal(e)}/> <button onClick={(e)=>handlePostReply(e)}>Post Reply</button></>   }</div>
-    <hr/>
+    <div/>
+    <div className="name">{name}</div>
+    <strong className="userName">@{userName}</strong>
+    <div className="Reply" onClick={()=>handleReply()}>Reply</div>
+    <div className="content">{content}</div>
+    <div >{reply && <> <input className="ReplyInput" type="text" placeholder="Type your comment here " value={val} onChange={(e)=>handleVal(e)}/> <button onClick={(e)=>handlePostReply(e)} className="Post-Reply">Post Reply</button></>   }</div>
+    <div/>
     <div>{replies?.map((r)=><> 
                       <div>{r.user.name} </div>
                       <div>@{r.user.username} </div>
                      <div><strong> @{r.replyingTo}</strong>{ r.content}</div>
+                     <hr />
                      </>
                      )}</div>
     </div>
