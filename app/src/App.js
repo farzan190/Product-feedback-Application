@@ -65,10 +65,10 @@ const filterResults=(e)=>{
     
               <div className='left-board'>
                <div className='gradient-column'>
-                <div>FrontEnd Mentor</div>
-                <div>feedback board</div>
+                <div className='FM'>FrontEnd Mentor</div>
+                <div className='FB'>feedback board</div>
                </div>
-               <div className='filter-buttons'>
+               <div className='filter-section'>
         <div className='filter-buttons'> <FilterButtons filterResults={filterResults} /></div>
                </div>
                 <div className='roadmap'>
@@ -76,12 +76,30 @@ const filterResults=(e)=>{
                   <div>Roadmap</div>
                   <div className='view'>view</div>
                  </div>
-                  <div className='plans-container'>
-                    <div><span className='planned-dot'></span>Planned <span>2</span></div>
-                    <div><span className='inprogress-dot'></span>In-Progress<span>3</span> </div>
-                    <div><span className='live-dot'></span>Live <span>1</span></div>
+                 
+                  <div className='amarta'>
+                  <div className='live-dot'>
+                      <div className='planned-dot'></div>
+                      <div>Planned</div>
+                      </div> 
+                      <strong>2</strong>
+                      </div>
+                  <div className='amarta'>
+                  <div className='live-dot'>
+                      <div className='inprogress-dot'></div>
+                      <div>In-Progress</div>
+                      </div> 
+                      <strong>3</strong>
 
                   </div>
+                  <div className='amarta'>
+                     <div className='live-dot'>
+                      <div className='purple-live'></div>
+                      <div>Live</div>
+                      </div> 
+                      <strong>1</strong>
+                  </div>   
+
                 </div>
               </div>
               

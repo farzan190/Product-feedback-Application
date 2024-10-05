@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   border: 0;
+  background-color: #f7f8fd;
   --radial-gradient: radial-gradient(128.88% 128.88% at 103.9% -10.39%, #e84d70 0%, #a337f6 53.09%, #28a7ed 100%);
   
 }
@@ -45,22 +46,32 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  width: 700px;
+  width: 815px;
   background-color: white;
   border-radius: 10px;
   background-color: #f7f8fd;
   
 }
 
+.title{
+  background-color: white;
+}
+.description{
+  background-color: white;
+}
+.category{
+  background-color: white;
+}
+
 .single-tab{
+  border-radius: 10px;
   display: flex;
   align-items:center;
   justify-content: flex-start;
-   width: 700px;
+   width: 815px;
    height: 150px;
    margin-bottom: 20px;
    background-color: white;
-  
   
 }
 .right-tab{
@@ -71,6 +82,8 @@
  margin-top: 30px;
  margin-left: 40px;
  line-height: 26px;
+ background-color: white;
+
 }
 
 
@@ -103,7 +116,7 @@
   align-items: center;
   justify-content: flex-start;
    height: 70px;
-   width: 700px;
+   width: 815px;
    background-color: #373f68;
    border-radius: 10px;
    margin-bottom: 20px;
@@ -129,7 +142,7 @@
   font-size: 14px;
   font-weight: 600;
   border-radius: 10px;
-  margin-left: 240px;
+  margin-left: 345px;
 }
 
 .suggestions-count{
@@ -184,6 +197,10 @@
   text-decoration: none;
   
 }
+.buttons-background{
+  background-color: white;
+}
+
 .filter-buttons{
   display: flex;
   justify-content: center;
@@ -200,16 +217,18 @@
  flex-direction: column;
  align-items: center;
  justify-content: center;
-  width: 270px;
-  height: 100px;
-  border:2px solid
+  width: 240px;
+  height: 183px;
+  padding: 24px;
+  border-radius: 10px;
+  background-color: white;
 }
 .roadmap-heading{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: white;
   width: 250px;
-  border: 2px solid;
   margin-bottom: 24px;
   font-size: 1.125rem;
   font-weight: bold;
@@ -223,8 +242,27 @@
   border-radius: 50%;
   width: 8px;
   height: 8px;
-  background-color: black;
+  background-color: orange;
 
+}
+.inprogress-dot{
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: purple;
+
+}
+.purple-live{
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: blue;
+  
+}
+.live-dot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .plans-container{
@@ -234,6 +272,7 @@
   width: 250px;
   border: 2px solid;
   justify-content: space-between;
+  background-color: white;
   
 }
 
@@ -336,4 +375,102 @@ input{
   width: 140px;
   height: 45px;
   
+}
+
+.comment-section{
+  
+  border: 2px solid blue;
+  width: 650px;
+  border-radius: 10px;
+  padding: 28px 32px;
+  background-color: white;
+}
+
+.comment-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.nameReply{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.username-content{
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  gap: 5px;
+}
+.Reply{
+  color: #4661e6;
+  font-weight: 600;
+  font-size: 0.813rem;
+  background-color: white;
+}
+
+.name{
+  line-height: 13px;
+  color:#3a4374;
+  letter-spacing: -0.2px;
+}
+.username{
+  line-height: 13px;
+  color: #647196;
+}
+.content{
+ color:  #647196;
+ line-height: 22px;
+}
+
+.hr{
+  color: black;
+}
+
+.filter-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 140px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 2px solid blue;
+  background-color: white;
+}
+.suggestions-count{
+  background-color: transparent;
+}
+
+.sortby{
+  background-color: transparent;
+}
+.FM{
+  background-color: transparent;
+}
+.FB{
+  background-color: transparent;
+}
+.AddFeedBackText{
+  text-decoration: none;
+  background-color: #ad1fea;
+  color: whitesmoke;
+}
+
+.amarta{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  margin-bottom: 24px;
+  background-color: white;
 }

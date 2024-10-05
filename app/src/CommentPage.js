@@ -12,15 +12,19 @@ const CommentPage=({id})=>{
     
       
 
-  return <div>{displayData.map((i)=>i.id===selectedTab &&  (<><Tab key={i.id} 
+  return <div>{displayData.map((i)=>i.id===selectedTab &&  (<div className='comment-page'>
+                                                       <div >  
+                                                        <Tab key={i.id} 
                                                         title={i.title}
                                                         description={i.description}
-                                                         category={i.category} 
-                                                         upvoted={i.upvoted} 
-                                                         upvotes={i.upvotes}/>
-
-                                                         <CommentSection comments={i.comments} />
-                                                           </>
+                                                        category={i.category} 
+                                                        upvoted={i.upvoted} 
+                                                        upvotes={i.upvotes}/>
+                                                        </div>
+                                                        <div className='comment-section'>
+                                                        <CommentSection comments={i.comments} />
+                                                        </div>
+                                                           </div>
                                                         )
 
                                                         )}</div>
