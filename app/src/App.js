@@ -65,7 +65,7 @@ const filterResults=(e)=>{
     
               <div className='left-board'>
                <div className='gradient-column'>
-                <div className='FM'>FrontEnd Mentor</div>
+                <h2 className='FM'>Frontend Mentor</h2>
                 <div className='FB'>feedback board</div>
                </div>
                <div className='filter-section'>

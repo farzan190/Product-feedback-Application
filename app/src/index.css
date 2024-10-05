@@ -23,11 +23,14 @@
 }
 
 .gradient-column{
+  font-size: 1.25rem;
+  line-height: 29px;
+  letter-spacing: -0.25px;
   display: flex;
   background: var(--radial-gradient);
   color: white;
   flex-direction: column;
-  width: 220px;
+  width: 255px;
   height: 70px;
   border-radius: 10px;
   padding: 62px 24px 24px;
@@ -165,12 +168,13 @@
   color: #647196;
   font-weight: 500;
   font-size: medium;
+  margin-bottom: 10px;
 }
 
 .category{
   color: #4661e6;
   background-color: #f2f4ff;
-  font-size: medium;
+  font-size: 14px;
   border-radius: 10px;
   font-weight: 550;
   padding: 6px 16px;
@@ -178,7 +182,7 @@
 .filter-button{
   color: #4661e6;
   background-color: #f2f4ff;
-  font-size: medium;
+  font-size: 14px;
   border-radius: 10px;
   font-weight: 550;
   padding: 6px 16px;
@@ -263,6 +267,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  
 }
 
 .plans-container{
@@ -444,7 +450,6 @@ input{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: 2px solid blue;
   background-color: white;
 }
 .suggestions-count{
@@ -455,7 +460,10 @@ input{
   background-color: transparent;
 }
 .FM{
+ font-family: "Jost", sans-serif;
   background-color: transparent;
+  font-size: 20px;
+  letter-spacing: -0.25px;
 }
 .FB{
   background-color: transparent;
