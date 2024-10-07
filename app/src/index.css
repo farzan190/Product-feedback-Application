@@ -294,8 +294,14 @@
  justify-content: center;
  align-items: center;
  gap: 10px;
+ color: white;
+ padding: 0px 42px 42px;
+ background-color: white;
 }
+.feedback-slip{
+  background-color:white;
 
+}
 
 .createfeedback{
   font-size: 1.5rem;
@@ -303,23 +309,28 @@
   line-height: 35px;
   color: #3a4374;
   margin: 24px 0 40px;
+  background-color: transparent;
 }
 
 .title-description{
   margin-bottom: 24px;
   color: #3a4374;
-
+  background-color: white;
+}
+.GoBack{
+  text-decoration: none;
 }
 
 .category-section{
   color: #3a4374;
-
+  background-color: white;
   margin-bottom: 24px;
 }
 
 .feedback-detail{
   margin-bottom: 24px;
   color: #3a4374;
+  background-color: transparent;
   
 }
 input{
@@ -337,32 +348,38 @@ input{
 
 .feedback-title{
   font-weight: 700;
+  background-color: white;
 
 }
 
 .cat{
   font-weight: 700;
+  background-color: white;
 
 }
 .FD{
   font-weight: 700;
   margin: 2px 0 16px;
-
+  background-color: white;
 }
 
 .feedback-description{
   color: #647196;
   margin: 2px 0 16px;
+  background-color: white;
 
 }
 .chooseACat{
   color: #647196;
   margin: 2px 0 16px;
+  background-color: white;
+
 }
 .FD-desc{
   color: #647196;
   margin: 2px 0 16px;
-
+  background-color: white;
+ 
 }
 
 .feedbackdescription{

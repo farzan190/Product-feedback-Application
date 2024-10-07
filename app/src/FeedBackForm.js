@@ -33,11 +33,14 @@ const FeedBackForm=()=>{
       setDisplayData(updatedData);   
       navigate(-1);                  
     };
-    return (
+
+    
+    return (<div className="outer-feedback-form">
+     <NavLink to={`/`}> <div className="GoBack">GoBack</div></NavLink>
+
     <div className="addfeedback-form">
      
-     <div>
-     <NavLink to={`/`}> goBack</NavLink>
+     <div className="feedback-slip">
 
     <h1 className="createfeedback">Create New FeedBack</h1>
     <div className="title-description">
@@ -76,7 +79,9 @@ const FeedBackForm=()=>{
       </div>
       <button className="addFeedback-button" onClick={(e)=>addFeedBack(e)}>AddFeedBack</button>
       </div> 
+
     </div> 
+    </div>
     )
 }
 
