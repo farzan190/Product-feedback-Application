@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import Cart from "./Context";
+
 const Comment=({id,name,userName,content,replies})=>{
-     // this recieves a single comment object with every detail in object along with the replies 
-     //we need to push the comment to that particular comment being rendered 
+    
     const [reply,setReply]=useState();
     const [val,setVal]=useState("")
     const {displayData,setDisplayData}=useContext(Cart);
@@ -50,14 +50,13 @@ const Comment=({id,name,userName,content,replies})=>{
           setDisplayData(updatedData);
     }
      
-    return <div>
+    return <div className="bcad">
     <div className="username-content">
 
-    <div>
+    <div >
      <div className="nameReply"> 
     <div>
     <h4 className="name">{name}</h4>
-
     <small className="userName">@{userName}</small>
     </div>
     <div>
@@ -66,20 +65,23 @@ const Comment=({id,name,userName,content,replies})=>{
     </div>
     <div>
     <div className="content">{content}</div>
+
     </div>
 
     </div>
     
-    <div >{reply && <> <input className="ReplyInput" type="text" placeholder="Type your comment here " value={val} onChange={(e)=>handleVal(e)}/> <button onClick={(e)=>handlePostReply(e)} className="Post-Reply">Post Reply</button></>   }</div>
-    <div/>
-    <div>{replies?.map((r)=><div className="replies"> 
-                      <div>{r.user.name} </div>
-                      <div>@{r.user.username} </div>
-                     <div><strong> @{r.replyingTo}</strong>{ r.content}</div>
-                     <hr />
+    <div className="replyNbutton" >{reply && <> <input className="ReplyInput" type="text" placeholder="Type your comment here " value={val} onChange={(e)=>handleVal(e)}/> <button onClick={(e)=>handlePostReply(e)} className="Post-Reply">Post Reply</button></>   }</div>
+   
+    <div className="all-the-replies">{replies?.map((r)=><div className="replies">
+                              
+                      <div  className="reply-name">{r.user.name} </div>
+                      <div className="reply-username">@{r.user.username} </div>
+                     <div className="reply-to-content"><strong className="reply-to-username"> @{r.replyingTo}</strong>{ r.content}</div>
                      </div>
                      )}</div>
     </div>
+    <div className="line"></div>
+
     </div>
      
 }

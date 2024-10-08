@@ -389,7 +389,7 @@ input{
 }
 
 .addFeedback-button{
-  background-color: #ad1fea;;
+  background-color: #ad1fea;
   padding: 10px 5px;
   border-radius: 5px;
   font-weight: 700;
@@ -399,11 +399,19 @@ input{
   height: 45px;
   
 }
+.abc{
+  border: 2px solid white;
+  background-color: red;
+}
+.bcad{
+  border: 2px solid white;
+
+  background-color: white;
+}
 
 .comment-section{
   
-  border: 2px solid blue;
-  width: 650px;
+  width: 749px;
   border-radius: 10px;
   padding: 28px 32px;
   background-color: white;
@@ -416,18 +424,102 @@ input{
   flex-direction: column;
   margin-top: 100px;
 }
+.line{
+  height: 0px;
+  width: 725px;
+  border: 1px solid grey;
+  margin-top: 40px;
+}
+.ReplyInput{
+  height: 50px;
+  padding: 16px 24px 20px;color: var(--grey-darker);
+  margin-right: 10px;
+  outline: 2px solid blue;
+}
 
+.Post-Reply{
+   padding: 12px  24px;
+   color: white;
+   background-color: #ad1fea;
+   border-radius: 10px;
+   height: 50px;
+}
+.seperate-comment{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 745px;
+  padding: 24px 32px 32px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+.AddComment{
+  margin-bottom: 24px;
+  background-color: white;
+}
+.input-comment{
+  width: 700px;
+  height: 60px;
+}
+.post-comment{
+  color: white;
+  padding:12px 24px;
+  height: 45px;
+  width: 165px;
+  background-color:#ad1fea;
+  border-radius: 10px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-left: 585px;
+  
+}
 .nameReply{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  
+  background-color: white;
 }
+.reply-name{
+  background-color: white;
+}
+.reply-username{
+  background-color: white;
+
+}
+
+.reply-to-username{
+  color: #ad1fea;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: "Jost", sans-serif;
+  margin-right: 5px;
+  background-color: white;
+}
+.reply-to-content{
+  margin-top: 20px;
+  background-color: white;
+}
+.all-the-replies{
+  background-color: white;
+}
+.replies{
+  color: #647196;;
+  background-color: white;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
 .username-content{
   display: flex;
   flex-direction: column;
   margin: 10px;
   gap: 5px;
+  background-color: white;
 }
 .Reply{
   color: #4661e6;
@@ -435,18 +527,26 @@ input{
   font-size: 0.813rem;
   background-color: white;
 }
-
+.replyNbutton{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 20px;
+}
 .name{
   line-height: 13px;
   color:#3a4374;
   letter-spacing: -0.2px;
+  background-color: white;
 }
 .username{
   line-height: 13px;
   color: #647196;
+  background-color: white;
 }
 .content{
  color:  #647196;
+ background-color: white;
  line-height: 22px;
 }
 
@@ -498,4 +598,10 @@ input{
   width: 250px;
   margin-bottom: 24px;
   background-color: white;
+}
+
+
+.image{
+  height: 40px;
+  width: 40px;
 }

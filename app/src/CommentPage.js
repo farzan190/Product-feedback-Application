@@ -2,6 +2,7 @@ import data from './data';
 import CommentSection from './CommentSection';
 import { useState ,useContext} from 'react';
 import Cart from './Context';
+
 import Tab  from './Tab';
 
 // display the same to same tab and comments below it 
@@ -24,6 +25,13 @@ const CommentPage=({id})=>{
                                                         <div className='comment-section'>
                                                         <CommentSection comments={i.comments} />
                                                         </div>
+                                                        <div className='seperate-comment'>
+                                                         <h3 className='AddComment'>Add Comment</h3>
+                                                         <input type='text' className='input-comment' placeholder='Type your comment here'/>
+                                                         <button className='post-comment'>Post Comment</button>
+                                                        </div> 
+                                                             
+
                                                            </div>
                                                         )
 
