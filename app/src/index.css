@@ -544,6 +544,12 @@ input{
   color: #647196;
   background-color: white;
 }
+small{
+  background-color: white;
+}
+.name-username{
+  background-color: white;
+}
 .content{
  color:  #647196;
  background-color: white;
@@ -601,7 +607,8 @@ input{
 }
 
 
-.image{
-  height: 40px;
+.pro-pic{
   width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
