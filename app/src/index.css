@@ -427,7 +427,7 @@ input{
 .line{
   height: 0px;
   width: 725px;
-  border: 1px solid grey;
+  border: 1px solid lightgrey;
   margin-top: 40px;
 }
 .ReplyInput{

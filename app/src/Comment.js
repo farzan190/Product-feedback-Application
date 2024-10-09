@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
 import Cart from "./Context";
-import profilepic from './assets/user-images/image-anne.jpg'
+import profilepic from './assets/user-images/image-zena.jpg'
 
 const Comment=({id,name,userName,content,replies,image})=>{
     
@@ -74,7 +74,7 @@ const Comment=({id,name,userName,content,replies,image})=>{
     <div className="replyNbutton" >{reply && <> <input className="ReplyInput" type="text" placeholder="Type your comment here " value={val} onChange={(e)=>handleVal(e)}/> <button onClick={(e)=>handlePostReply(e)} className="Post-Reply">Post Reply</button></>   }</div>
    
     <div className="all-the-replies">{replies?.map((r)=><div className="replies">
-                              
+                      <img src={profilepic} className="pro-pic"/>  
                       <div  className="reply-name">{r.user.name} </div>
                       <div className="reply-username">@{r.user.username} </div>
                      <div className="reply-to-content"><strong className="reply-to-username"> @{r.replyingTo}</strong>{ r.content}</div>
