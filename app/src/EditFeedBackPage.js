@@ -53,7 +53,7 @@ const EditFeedBackPage=()=>{
    
    <div className="editfeedbackpage-buttons">
     <div><button className="delete">Delete</button></div>
-    <div>
+    <div className="cancel-savechanges">
     <button className="cancel">Cancel</button>
     <button className="save-changes">Save Changes</button>   
     </div>

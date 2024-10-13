@@ -642,6 +642,7 @@ small{
 }
 
 .editfeedbackpage-buttons{
+  width: 550px;
   display: flex;
   justify-content: space-between;
 }
@@ -690,6 +691,7 @@ small{
   font-weight: 700;
   width: 100px;
   height: 50px;
+  margin-right: 10px;
 
 }
 .save-changes{
@@ -699,5 +701,4 @@ small{
   font-weight: 700;
   width: 130px;
   height: 50px;
-
 }
