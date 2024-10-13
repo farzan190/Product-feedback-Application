@@ -15,7 +15,7 @@ const EditFeedBackPage=()=>{
       <img src={editfeedbackimg} className="editfeedback-img" />
      <h1 className="EF-heading">Editing 'Add tags for solutions'</h1>
 
-    <div>
+    <div className="ef-titledescription">
     <div className="editfeedback-title">Feedback Title</div>
     <div className="editfeedback-description">Add a short, descriptive headline</div>
     <input type="text"/>
@@ -45,7 +45,7 @@ const EditFeedBackPage=()=>{
     </select>
     </div>
 
-    <div>
+    <div className="ef-detail-description">
     <div className="editfeedback-title">Feedback Detail</div>
     <div className="editfeedback-description">Include any specific comments on what should be improved, added, etc.</div>
     <input type="text"/>
