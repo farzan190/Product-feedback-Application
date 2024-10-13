@@ -612,3 +612,92 @@ small{
   height: 40px;
   border-radius: 50%;
 }
+
+.editfeedback-slip{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+   margin-left: auto;
+   margin-right: auto;
+  margin-top: 190px;
+  margin-bottom: 190px;
+
+  gap: 20px;
+  padding: 0 42px 42px;
+  border-radius: 10px;font-family: "Jost", sans-serif;
+  background-color: white;
+  font-weight: 700;
+  color: #3a4374;
+  font-size: 0.875rem;
+}
+.EF-heading{
+  font-size: 1.5rem;
+  line-height: 35px;
+  margin: 10px 0px 75px -200px;
+  letter-spacing: -0.33px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.editfeedbackpage-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.editfeedback-description{
+  font-weight: 100;
+  font-size: .875rem;
+  color: #647196;;
+  margin: 5px 0 16px;
+  background-color: white;
+}
+.editfeedback-title{
+  background-color: white;
+}
+.feature-options{
+  width: 500px;
+  padding: 13px 24px;
+  border-radius: 5px;
+}
+.editfeedback-category{
+  background-color: white;
+  margin-left: -40px;
+}
+.editfeedback-img{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 70px;
+  height: 70px;
+  background-color: white;
+  margin-left: -428px;
+  margin-top: -38px;
+}
+.delete{
+  background-color: #d73737;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  width: 100px;
+  height: 50px;
+}
+.cancel{
+  background-color: #3a4374;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  width: 100px;
+  height: 50px;
+
+}
+.save-changes{
+  background-color: #ad1fea;;
+  border-radius: 10px;
+  color: white;
+  font-weight: 700;
+  width: 130px;
+  height: 50px;
+
+}
