@@ -12,8 +12,9 @@ const Cart=createContext();
    const [category,setCategory]=useState("all");
    const [detail,setDetail]=useState("");
    const [originalData,setOriginalData]=useState(data[0].productRequests);  
- 
-    return (<Cart.Provider value={{selectedTab,setSelectedTab,displayData,setDisplayData,title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData}} >
+   const [passingTitle,setPassingTitle]=useState("");
+
+    return (<Cart.Provider value={{selectedTab,setSelectedTab,displayData,setDisplayData,title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,passingTitle,setPassingTitle}} >
        {children} 
     </Cart.Provider>)
 }
