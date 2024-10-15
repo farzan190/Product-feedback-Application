@@ -9,6 +9,12 @@ const EditFeedBackPage=({description})=>{
   const {displayData,setDisplayData}=useContext(Cart);
   const [title,setTitle]=useState(passingTitle);
   const {category,setCategory}=useContext(Cart);
+  const {passingCategory,setpassingCategory}=useContext(Cart);
+  const {passingDesc,setPassingDesc}=useContext(Cart);
+  const {passingStat,setPassingStat}=useContext(Cart);
+
+  
+
   
  
 
@@ -22,15 +28,10 @@ const EditFeedBackPage=({description})=>{
 </div>
 
 
-
-
-
-
-
 <div className="editfeedback-category">
 <div className="editfeedback-title">Category</div>
 <div className="editfeedback-description">Choose a category for your feedback</div>
-<select className="categoryoptions" value={i.category} onChange={(e)=>setCategory(e.target.value)} >
+<select className="categoryoptions" value={passingCategory} onChange={(e)=>setpassingCategory(e.target.value)} >
   <option>Feature</option>
   <option>UI</option>
   <option>UX</option>
@@ -43,7 +44,7 @@ const EditFeedBackPage=({description})=>{
 <div className="editfeedback-category">
 <div className="editfeedback-title">Update Status</div>
 <div className="editfeedback-description">Change feature state</div>
-<select className="feature-options" value={i.status} > 
+<select className="feature-options" value={passingStat} onChange={(e)=>setPassingStat(e.target.value)} > 
 <option>Suggestion</option>
 <option>Planned</option>
 <option>In-Progress</option>
@@ -54,7 +55,7 @@ const EditFeedBackPage=({description})=>{
 <div className="ef-detail-description">
 <div className="editfeedback-title">Feedback Detail</div>
 <div className="editfeedback-description">Include any specific comments on what should be improved, added, etc.</div>
-<input type="text" value={i.description} onChange={(e)=>setTitle(e.target.value)} /> 
+<input type="text" value={passingDesc} onChange={(e)=>setPassingDesc(e.target.value)} /> 
 </div>
 
 <div className="editfeedbackpage-buttons">

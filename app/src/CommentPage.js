@@ -11,13 +11,20 @@ const CommentPage=({id})=>{
   const {selectedTab,setSelectedTab}=useContext(Cart);
   const [currentTab,setCurrentTab]=useState(0);
   const {passingTitle,setPassingTitle}=useContext(Cart);
+  const {passingCategory,setpassingCategory}=useContext(Cart);
+  const {passingDesc,setPassingDesc}=useContext(Cart);
+  const {passingStat,setPassingStat}=useContext(Cart);
     
       
 
   return <div>{displayData.map((i)=>i.id===selectedTab &&  (<div className='comment-page'>
+                                                         <div>{setPassingTitle(i.title)}</div>  
+                                                         <div>{setpassingCategory(i.category)}</div>
+                                                         <div>{setPassingDesc(i.description)}</div>
+                                                         <div>{setPassingStat(i.status)}</div>
+                                                          
                                                        <div >
                                                          <div className='gobackandeditfeedback'>  
-                                                         <div>{setPassingTitle(i.title)}</div>  
                                                        <button>Go back</button> 
                                                         <button className='efb'><NavLink className={'efb'}  to={`/editFeedBack`}>Edit Feedback</NavLink></button>
                                                         </div> 
