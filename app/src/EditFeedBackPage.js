@@ -2,8 +2,12 @@ import { useState } from "react";
 import { useContext } from "react";
 import Cart from "./Context";
 import editfeedbackimg from './assets/icon-editfeedback/icon-edit-feedback.svg';
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const EditFeedBackPage=({description})=>{
+  let changedData;
+  let updatedObject;
   const {passingTitle,setPassingTitle}=useContext(Cart);
   const {selectedTab,setSelectedTab}=useContext(Cart);
   const {displayData,setDisplayData}=useContext(Cart);
@@ -12,19 +16,39 @@ const EditFeedBackPage=({description})=>{
   const {passingCategory,setpassingCategory}=useContext(Cart);
   const {passingDesc,setPassingDesc}=useContext(Cart);
   const {passingStat,setPassingStat}=useContext(Cart);
+  const {originalData,setOriginalData}=useContext(Cart);    
 
-  
+  const navigate=useNavigate();
 
-  
+    // map through the content and change the objects details , now the questions should i map though the display data or orginaldata
+    // i think if i want to delete somethng i will need to map through the original data else i will map through the displaydata 
  
+  const saveChangesFunction=(e)=>{
+     changedData= displayData.map((item)=>{
+        if(item.id==e){
+           updatedObject={...item,"title":passingTitle,"category":passingCategory,"description":passingDesc,"status":passingStat} 
+          return updatedObject;
+        }
+        return item;
+       })
+     console.log(changedData);
+     setOriginalData(changedData);  
+     setDisplayData(changedData);   
+     navigate(-2);
+   }  
+ 
+   const cancelButton=()=>{
+    navigate(-2);
+   }
+
 
  return <div>{displayData.map((i)=>i.id===selectedTab &&   (<div className="editfeedback-slip">
   <img src={editfeedbackimg} className="editfeedback-img" />
- <h1 className="EF-heading">Editing 'Add tags for solutions'</h1>
+ <h1 className="EF-heading">Editing `{passingTitle}`</h1>
 <div className="ef-titledescription">
 <div className="editfeedback-title">Feedback Title</div>
 <div className="editfeedback-description">Add a short, descriptive headline</div>
-<input type="text" value={title} onChange={(e)=>setTitle(e.target.value)} />
+<input type="text" value={passingTitle} onChange={(e)=>setPassingTitle(e.target.value)} />
 </div>
 
 
@@ -61,8 +85,8 @@ const EditFeedBackPage=({description})=>{
 <div className="editfeedbackpage-buttons">
 <div><button className="delete">Delete</button></div>
 <div className="cancel-savechanges">
-<button className="cancel">Cancel</button>
-<button className="save-changes">Save Changes</button>   
+<button className="cancel" onClick={()=>cancelButton()}>Cancel</button>
+<button className="save-changes" onClick={()=>saveChangesFunction(i.id)}>Save Changes</button>   
 </div>
 
 </div>
@@ -74,24 +98,6 @@ const EditFeedBackPage=({description})=>{
 
 }
 export default EditFeedBackPage;
-
-
-
-
-
-
-
-
-
-
-
-// we are basically selecting the 
-
-
-
-
-
-
 
 
 
