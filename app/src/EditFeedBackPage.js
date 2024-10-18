@@ -20,11 +20,16 @@ const EditFeedBackPage=({description})=>{
 
   const navigate=useNavigate();
 
-    // map through the content and change the objects details , now the questions should i map though the display data or orginaldata
-    // i think if i want to delete somethng i will need to map through the original data else i will map through the displaydata 
- 
+  const deleteButton=(e)=>{
+    navigate(-2);
+   const deletedData= originalData.filter((item)=>item.id!==e
+    )
+    setOriginalData(deletedData);
+    setDisplayData(deletedData);
+  } 
+
   const saveChangesFunction=(e)=>{
-     changedData= displayData.map((item)=>{
+     changedData= originalData.map((item)=>{
         if(item.id==e){
            updatedObject={...item,"title":passingTitle,"category":passingCategory,"description":passingDesc,"status":passingStat} 
           return updatedObject;
@@ -83,7 +88,7 @@ const EditFeedBackPage=({description})=>{
 </div>
 
 <div className="editfeedbackpage-buttons">
-<div><button className="delete">Delete</button></div>
+<div><button className="delete" onClick={()=>deleteButton(i.id)}>Delete</button></div>
 <div className="cancel-savechanges">
 <button className="cancel" onClick={()=>cancelButton()}>Cancel</button>
 <button className="save-changes" onClick={()=>saveChangesFunction(i.id)}>Save Changes</button>   
