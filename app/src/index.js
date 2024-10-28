@@ -8,6 +8,7 @@ import { ContextProvider } from './Context';
 import FeedBackForm from './FeedBackForm';
 import CommentPage from './CommentPage';
 import EditFeedBackPage from './EditFeedBackPage';
+import Roadmap from './Roadmap';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
@@ -18,6 +19,8 @@ root.render(
       <Route path='/feedback' element={<FeedBackForm/>} />
       <Route path='/CommentPage' element={<CommentPage/>} />
       <Route path='/editFeedBack' element={<EditFeedBackPage/>} />
+      <Route path='/roadmap' element={<Roadmap/>} />
+
     </Routes>
     </BrowserRouter>
     </ContextProvider>

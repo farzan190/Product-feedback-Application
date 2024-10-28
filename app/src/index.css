@@ -30,7 +30,7 @@
   background: var(--radial-gradient);
   color: white;
   flex-direction: column;
-  width: 255px;
+  width: 235px;
   height: 70px;
   border-radius: 10px;
   padding: 62px 24px 24px;
@@ -91,7 +91,7 @@
 
 
 .left-tab{
-  margin-left: 10px;
+  margin-left: 30px;
    width: 30px;
    height: 50px;
    
@@ -103,8 +103,23 @@
    height: 60px;
    color: white;
    border-radius: 10px;
+  font-weight: 600;
    
 }
+.didntVote{
+  color: #3a4374;
+  background-color: #f2f4ff;;
+  width: 40px;
+  height: 60px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.didntVote:hover{
+background-color:#cfd7ff; 
+color: #3a4374;
+
+}
+
 .home-page{
   display: flex;
   flex-direction: column;
@@ -134,9 +149,13 @@
   background-color: #373f68;
   color: white;
   border: none;
-   margin-left: 20px;
-}
+  margin-left: 3px;
+  font-weight: 700;
 
+}
+option{
+  background-color: black;
+}
 
 .Add-feedback{
   background-color: #ad1fea;
@@ -145,25 +164,44 @@
   font-size: 14px;
   font-weight: 600;
   border-radius: 10px;
-  margin-left: 345px;
+  margin-left: 220px;
 }
-
+.suggestions{
+  background-color: transparent;
+  margin-left: 5px;
+}
+.icon{
+  background-color: transparent;
+  margin-right: 13px;
+}
+.icon-sugg{
+  background-color: transparent;
+}
 .suggestions-count{
-  margin-left: 10px;
+  margin-left: 30px;
   color: white;
   font-style: bold;
-  font-weight: 400;
-  margin-right: 10px;
+  font-size: large;
+  font-weight: 900;
+  margin-right: 30px;
+  font-family: "Jost", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navlink{
-  font-size: 20px;
-  font-weight: 900;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 800;
   color: #3a4374;
   text-decoration: none;
+  background-color: white;
 
 }
-
+.navlink:hover{
+  color: blue;
+}
 .description{
   color: #647196;
   font-weight: 500;
@@ -177,7 +215,7 @@
   font-size: 14px;
   border-radius: 10px;
   font-weight: 550;
-  padding: 6px 16px;
+  padding: 2px 16px;
 }
 .filter-button{
   color: #4661e6;
@@ -189,7 +227,10 @@
   margin:2px;
   
 }
-
+.filter-button:hover{
+  color: #4661e6; 
+  background-color:#cfd7ff; 
+}
 
 .board{
   display: flex;
@@ -723,4 +764,46 @@ small{
   font-weight: 700;
   width: 170px;
   height: 50px;
+}
+.comm-length{
+  background-color: white;
+  font-weight: bold;
+  font-size: large;
+}
+.commentImg{
+  margin-left: 200px;
+  background-color: white;
+}
+h3{
+  background-color: white;
+}
+.comment-size{
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  gap: 5px;
+  margin-left:auto;
+  margin-right: 35px;
+  background-color: white;
+}
+
+.roadmap-categories{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 1000px;
+  margin-left: 210px;
+  margin-top: 60px;
+}
+.roadmap-single-tab{
+  border-radius: 10px;
+  display: flex;
+  align-items:center;
+  justify-content: flex-start;
+   width: 400px;
+   height: 300px;
+   margin-bottom: 20px;
+   margin-left: 20px;
+   background-color: white;
+
 }

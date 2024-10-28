@@ -4,7 +4,7 @@ import Cart from "./Context";
 import CommentPage from "./CommentPage";
 import commentImg from "./assets/icon-comments.svg"
 
-const Tab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
+const RoadmapTab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
     const [vote,setVote]=useState(upvotes);
     const [isVoted,setIsVoted]=useState(upvoted);
     const {selectedTab,setSelectedTab}=useContext(Cart);
@@ -23,7 +23,7 @@ const Tab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
     const handleTab=()=>{
         setSelectedTab(id);
        }
-return <div className="single-tab" id={id} onClick={()=>handleTab()}>
+return <div className="roadmap-single-tab" id={id} onClick={()=>handleTab()}>
       <div className="left-tab">
       <div ><button className={isVoted?"vote":"didntVote"} onClick={(e)=>handleUpvote(e)}>{vote}</button></div>
       </div>
@@ -40,6 +40,6 @@ return <div className="single-tab" id={id} onClick={()=>handleTab()}>
       </div>
 }
 
-export default Tab;
+export default RoadmapTab;
 
 

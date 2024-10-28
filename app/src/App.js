@@ -7,7 +7,7 @@ import FilterButtons from './FilterButtons';
 import { useContext } from 'react';
 import {NavLink} from "react-router-dom";
 import Cart from './Context';
-
+import suggestionIcon from './assets/icon-suggestion.svg';
 
 function App() {
   const {displayData,setDisplayData}=useContext(Cart);
@@ -105,7 +105,7 @@ const filterResults=(e)=>{
               
            <div className='home-page'>
             <div className='header'>
-             <div className='suggestions-count'> 6 Suggestions</div>
+             <div className='suggestions-count'><span className='icon'><img src={suggestionIcon} className='icon-sugg'/></span> {displayData.length} <span className='suggestions'>Suggestions</span></div>
             <div className='sortby'>Sort by:</div>
             <select className='options' onClick={(e)=>setSortByHandler(e)}>
               <option>Most Upvotes</option>
@@ -117,7 +117,7 @@ const filterResults=(e)=>{
           <button className='Add-feedback'><NavLink className='AddFeedBackText' to={`/feedback`}>+ Add Feedback</NavLink></button>
             </div>
           <div className='main-page'> 
-         <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes}/>)}</div>
+         <div className='tabs'>{displayData.map((i)=><Tab  id={i.id} title={i.title} description={i.description} category={i.category} upvoted={i.upvoted} upvotes={i.upvotes} commentslength={i.comments.length}/>)}</div>
          </div></div>
               </div>)            
 }

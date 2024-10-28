@@ -5,7 +5,7 @@ import Cart from './Context';
 import { NavLink } from 'react-router-dom';
 import Tab  from './Tab';
 
-// display the same to same tab and comments below it 
+
 const CommentPage=({id})=>{
   const {displayData,setDisplayData}=useContext(Cart);
   const {selectedTab,setSelectedTab}=useContext(Cart);
@@ -25,7 +25,7 @@ const CommentPage=({id})=>{
                                                           
                                                        <div >
                                                          <div className='gobackandeditfeedback'>  
-                                                       <button>Go back</button> 
+                                                        <button>Go back</button> 
                                                         <button className='efb'><NavLink className={'efb'}  to={`/editFeedBack`}>Edit Feedback</NavLink></button>
                                                         </div> 
                                                         <Tab key={i.id} 

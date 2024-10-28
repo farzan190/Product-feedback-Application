@@ -49,6 +49,7 @@ const Comment=({id,name,userName,content,replies,image})=>{
       });
           setOriginalData(updatedData);
           setDisplayData(updatedData);
+          setReply(!reply);
     }
      
     return <div className="bcad">
