@@ -2,7 +2,9 @@ import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Cart from "./Context";
 import CommentPage from "./CommentPage";
-import commentImg from "./assets/icon-comments.svg"
+import commentImg from "./assets/icon-comments.svg";
+import arrowUp from "./assets/icon-arrow-up.svg";
+
 
 const Tab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
     const [vote,setVote]=useState(upvotes);
@@ -25,7 +27,10 @@ const Tab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
        }
 return <div className="single-tab" id={id} onClick={()=>handleTab()}>
       <div className="left-tab">
-      <div ><button className={isVoted?"vote":"didntVote"} onClick={(e)=>handleUpvote(e)}>{vote}</button></div>
+       <div className="upvote-button">
+       <button className={isVoted?"vote":"didntVote"} onClick={(e)=>handleUpvote(e)}><div className="arrow-up"><img src={arrowUp} className="arrow-up"/></div>
+       <div className="vote-count">{vote}</div></button>
+      </div>
       </div>
       
        <div className="right-tab">

@@ -4,6 +4,8 @@ import { useState ,useContext} from 'react';
 import Cart from './Context';
 import { NavLink } from 'react-router-dom';
 import Tab  from './Tab';
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 const CommentPage=({id})=>{
@@ -14,7 +16,37 @@ const CommentPage=({id})=>{
   const {passingCategory,setpassingCategory}=useContext(Cart);
   const {passingDesc,setPassingDesc}=useContext(Cart);
   const {passingStat,setPassingStat}=useContext(Cart);
-    
+  const {originalData,setOriginalData}=useContext(Cart);    
+
+  
+  const handlePostcomment=(id)=>{ 
+    const updatedData = originalData.map((obj)=> 
+      {
+        
+         if(obj.id===id){
+          return {
+            ...obj,
+           comments: [...obj.comments,{
+            "id": 28765,
+            "content": "waaaaaaaaaahhhhhhhhhhhhhh",
+            "user": {
+              "image": "./assets/user-images/image-suzanne.jpg",
+              "name": "Suzanne Chang",
+              "username": "upbeat1811"
+            },
+            "replies":[],
+          }]
+          }
+
+         }
+         return obj;
+      
+      })
+        console.log(updatedData)  
+        setOriginalData(updatedData);
+        setDisplayData(updatedData);
+
+  }
       
 
   return <div>{displayData.map((i)=>i.id===selectedTab &&  (<div className='comment-page'>
@@ -25,7 +57,7 @@ const CommentPage=({id})=>{
                                                           
                                                        <div >
                                                          <div className='gobackandeditfeedback'>  
-                                                        <button>Go back</button> 
+                                                         <NavLink  to={-1}>Go Back</NavLink>
                                                         <button className='efb'><NavLink className={'efb'}  to={`/editFeedBack`}>Edit Feedback</NavLink></button>
                                                         </div> 
                                                         <Tab key={i.id} 
@@ -41,10 +73,8 @@ const CommentPage=({id})=>{
                                                         <div className='seperate-comment'>
                                                          <h3 className='AddComment'>Add Comment</h3>
                                                          <input type='text' className='input-comment' placeholder='Type your comment here'/>
-                                                         <button className='post-comment'>Post Comment</button>
+                                                         <button className='post-comment' onClick={()=>handlePostcomment(i.id)}>Post Comment</button>
                                                         </div> 
-                                                             
-
                                                            </div>
                                                         )
 

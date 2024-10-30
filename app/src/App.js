@@ -74,7 +74,7 @@ const filterResults=(e)=>{
                 <div className='roadmap'>
                  <div className='roadmap-heading'>
                   <div>Roadmap</div>
-                  <div className='view'>view</div>
+                  <div className='view'><NavLink className='view' to={`/roadmap`}>view</NavLink></div>
                  </div>
                  
                   <div className='amarta'>

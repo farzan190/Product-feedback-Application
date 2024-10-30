@@ -24,7 +24,7 @@ const Comment=({id,name,userName,content,replies,image})=>{
       const updatedData = originalData.map((obj) => {
         return {
           ...obj,
-          comments: obj.comments.map((com) => {
+          comments: obj?.comments?.map((com) => {
             if (com.id === id) {
               return {
                 ...com,

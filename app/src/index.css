@@ -58,6 +58,7 @@
 
 .title{
   background-color: white;
+  width: 400px;
 }
 .description{
   background-color: white;
@@ -94,10 +95,15 @@
   margin-left: 30px;
    width: 30px;
    height: 50px;
-   
+  border-radius: 10px;  
 
 }
 .vote{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
   background-color: #4661e6;
    width: 40px;
    height: 60px;
@@ -281,6 +287,9 @@ option{
 }
 .view{
   font: x-small;
+  text-decoration: none;
+  color: #3a4374;
+
 }
 
 .planned-dot{
@@ -517,6 +526,22 @@ input{
   margin-left: 585px;
   
 }
+.upvote-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-up{
+  color: #000;
+  background-color: transparent;
+}
+.vote-count{
+  background-color: transparent;
+  margin-top: 5px;
+  padding-top: 3px;
+}
+
 .nameReply{
   display: flex;
   justify-content: space-between;
@@ -798,12 +823,155 @@ h3{
 .roadmap-single-tab{
   border-radius: 10px;
   display: flex;
-  align-items:center;
+  flex-direction: column;
+  align-items:flex-start;
   justify-content: flex-start;
-   width: 400px;
-   height: 300px;
-   margin-bottom: 20px;
-   margin-left: 20px;
-   background-color: white;
+  width: 400px;
+  height: 300px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: white;
 
+}
+
+.lower-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin-top: 20px;
+  width: 370px;
+  margin-left: 29px;
+}
+
+.roadmap-left-tab{
+  margin-left: 10px;
+  width: 30px;
+  height: 50px;
+  background-color: white;
+}
+.roadmap-comment-size{
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  gap: 5px;
+  margin-left:auto;
+  margin-right: 35px;
+  background-color: white;
+}
+.roadmap-cmnt-img{
+  background-color: white;
+}
+.roadmap-didnt-vote{
+  color: #3a4374;
+  background-color: #f2f4ff;;
+  width: 70px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.roadmap-vote{
+  color: white;
+  background-color: #4661e6;
+  width: 70px;
+  height: 40px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.roadmap-didnt-vote:hover{
+  background-color:#cfd7ff; 
+  color: #3a4374;
+  
+  }
+.roadmap-line{
+  width: 100%;
+  height: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: purple;
+}
+.planned{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  width: 100%;
+  height: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #f49f85;
+
+}
+.In-progress{
+  width: 100%;
+  height: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #ad1fea;
+}
+.live{
+  width: 100%;
+  height: 7px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #62bcfa;
+
+}
+.road-category{
+  background-color: white;
+  color: grey;
+  font-size: medium;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+.road-dot{
+  width: 8px;
+  height: 8px;
+  background-color:red;
+  border-radius: 50%;
+  margin-top: 10px;
+
+}
+.dot-cat{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+}
+.road-cat-title{
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+.roadmap-head{
+  font-size: large;
+  font-weight: 600;
+  font-family: "Jost", sans-serif;
+  margin-bottom: 10px;
+}
+.road-detail{
+  color: grey;
+}
+.RoadMap-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  width: 1250px;
+  height: 30px;
+  background-color: #373f68;
+  margin-left: 90px;
+  margin-right: 190px;
+  margin-top: 50px;
+  border-radius: 10px;
+  font-size: 25px;
+  padding-top: 40px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
+.road{
+  background-color: transparent;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 700;
 }
