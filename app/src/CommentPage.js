@@ -17,7 +17,7 @@ const CommentPage=({id})=>{
   const {passingDesc,setPassingDesc}=useContext(Cart);
   const {passingStat,setPassingStat}=useContext(Cart);
   const {originalData,setOriginalData}=useContext(Cart);    
-
+  const [com,setCom]=useState("");  
   
   const handlePostcomment=(id)=>{ 
     const updatedData = originalData.map((obj)=> 
@@ -27,8 +27,8 @@ const CommentPage=({id})=>{
           return {
             ...obj,
            comments: [...obj.comments,{
-            "id": 28765,
-            "content": "waaaaaaaaaahhhhhhhhhhhhhh",
+            "id": uuidv4(),
+            "content": com,
             "user": {
               "image": "./assets/user-images/image-suzanne.jpg",
               "name": "Suzanne Chang",
@@ -72,7 +72,7 @@ const CommentPage=({id})=>{
                                                         </div>
                                                         <div className='seperate-comment'>
                                                          <h3 className='AddComment'>Add Comment</h3>
-                                                         <input type='text' className='input-comment' placeholder='Type your comment here'/>
+                                                         <input type='text' className='input-comment' placeholder='Type your comment here' value={com} onChange={(e)=>setCom(e.target.value)} />
                                                          <button className='post-comment' onClick={()=>handlePostcomment(i.id)}>Post Comment</button>
                                                         </div> 
                                                            </div>
