@@ -1,4 +1,3 @@
-import data from './data';
 import CommentSection from './CommentSection';
 import { useState ,useContext} from 'react';
 import Cart from './Context';
@@ -9,14 +8,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const CommentPage=({id})=>{
-  const {displayData,setDisplayData}=useContext(Cart);
-  const {selectedTab,setSelectedTab}=useContext(Cart);
-  const [currentTab,setCurrentTab]=useState(0);
-  const {passingTitle,setPassingTitle}=useContext(Cart);
-  const {passingCategory,setpassingCategory}=useContext(Cart);
-  const {passingDesc,setPassingDesc}=useContext(Cart);
-  const {passingStat,setPassingStat}=useContext(Cart);
-  const {originalData,setOriginalData}=useContext(Cart);    
+  const {displayData,setDisplayData,selectedTab,setPassingTitle,setpassingCategory,setPassingDesc,setPassingStat,originalData,setOriginalData}=useContext(Cart);
   const [com,setCom]=useState("");  
   
   const handlePostcomment=(id)=>{ 
@@ -42,7 +34,7 @@ const CommentPage=({id})=>{
          return obj;
       
       })
-        console.log(updatedData)  
+        
         setOriginalData(updatedData);
         setDisplayData(updatedData);
 

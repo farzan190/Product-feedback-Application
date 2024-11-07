@@ -5,16 +5,10 @@ import { useNavigate } from "react-router-dom";
 import addNewFeedBack from './assets/icon-new-feedback.svg';
 
 const FeedBackForm=()=>{
-  const {title,setTitle}=useContext(Cart);
-  const {category,setCategory}=useContext(Cart);
-  const {detail,setDetail}=useContext(Cart);
-  const {originalData,setOriginalData}=useContext(Cart);    
-  const {displayData,setDisplayData}=useContext(Cart);
+  const {title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,setDisplayData}=useContext(Cart);
    const navigate=useNavigate();
  
-    const handleChange=(e)=>{
-        return  ;
-    }
+    
     
     const addFeedBack = (e) => {
       const newFeedback = {

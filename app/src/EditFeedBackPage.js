@@ -1,22 +1,13 @@
-import { useState } from "react";
 import { useContext } from "react";
 import Cart from "./Context";
 import editfeedbackimg from './assets/icon-editfeedback/icon-edit-feedback.svg';
-import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const EditFeedBackPage=({description})=>{
   let changedData;
   let updatedObject;
-  const {passingTitle,setPassingTitle}=useContext(Cart);
-  const {selectedTab,setSelectedTab}=useContext(Cart);
-  const {displayData,setDisplayData}=useContext(Cart);
-  const [title,setTitle]=useState(passingTitle);
-  const {category,setCategory}=useContext(Cart);
-  const {passingCategory,setpassingCategory}=useContext(Cart);
-  const {passingDesc,setPassingDesc}=useContext(Cart);
-  const {passingStat,setPassingStat}=useContext(Cart);
-  const {originalData,setOriginalData}=useContext(Cart);    
+  const {passingTitle,setPassingTitle,displayData,setDisplayData,passingCategory,setpassingCategory,passingDesc,setPassingDesc,passingStat,setPassingStat,originalData,setOriginalData,selectedTab,setSelectedTab}=useContext(Cart);
+  
 
   const navigate=useNavigate();
 
@@ -36,7 +27,7 @@ const EditFeedBackPage=({description})=>{
         }
         return item;
        })
-     console.log(changedData);
+     
      setOriginalData(changedData);  
      setDisplayData(changedData);   
      navigate(-2);

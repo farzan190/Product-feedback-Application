@@ -9,8 +9,7 @@ import arrowUp from "./assets/icon-arrow-up.svg";
 const Tab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
     const [vote,setVote]=useState(upvotes);
     const [isVoted,setIsVoted]=useState(upvoted);
-    const {selectedTab,setSelectedTab}=useContext(Cart);
-    const {passingTitle,setPassingTitle}=useContext(Cart);
+    const {setSelectedTab}=useContext(Cart);
      
     const handleUpvote=(e)=>{
            if(!isVoted){

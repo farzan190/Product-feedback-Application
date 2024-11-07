@@ -1,16 +1,14 @@
-import { useState } from "react";
 import { useContext } from "react";
 import Cart from "./Context";
 import RoadmapTab from "./RoadmapTab";
 import { NavLink } from "react-router-dom";
 
 const Roadmap=()=>{
-    const {displayData,setDisplayData}=useContext(Cart);
-    const {originalData,setOriginalData}=useContext(Cart);    
+    const {displayData}=useContext(Cart);   
      
-    let planneditems=  originalData.filter((item)=>item.status=="planned");
-    let progress=  originalData.filter((item)=>item.status=="in-progress");
-    let live=  originalData.filter((item)=>item.status=="live");
+    let planneditems=  displayData.filter((item)=>item.status=="planned");
+    let progress=  displayData.filter((item)=>item.status=="in-progress");
+    let live=  displayData.filter((item)=>item.status=="live");
     
     return <div>
         <NavLink  to={-1}>Go Back</NavLink>
@@ -45,15 +43,6 @@ const Roadmap=()=>{
     </div>
         </div>
     </div>
-
-    
-
-
-
-
-
-
-
 
     </div>
 }

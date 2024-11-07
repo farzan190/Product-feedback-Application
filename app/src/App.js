@@ -10,42 +10,32 @@ import Cart from './Context';
 import suggestionIcon from './assets/icon-suggestion.svg';
 
 function App() {
-  const {displayData,setDisplayData}=useContext(Cart);
-  const {title,setTitle}=useContext(Cart);
-  const {category,setCategory}=useContext(Cart);
-  const {detail,setDetail}=useContext(Cart);
-  const {selectedTab,setSelectedTab}=useContext(Cart);
-  const {originalData,setOriginalData}=useContext(Cart);    
+  const {displayData,setDisplayData,originalData}=useContext(Cart);
 
 
 
 const setSortByHandler = (e) => {
   if(e.target.value=="Most Upvotes") {
-      console.log(true);
       const sortedData= displayData.sort((a, b) => b.upvotes - a.upvotes);
-      console.log(sortedData);
       const instaData=[...sortedData];
       setDisplayData(instaData);
   }
   if (e.target.value=="Least Upvotes"){
-      console.log(true);
        const sortedData= displayData.sort((a, b) => a.upvotes - b.upvotes);
        const instaData=[...sortedData];
       setDisplayData(instaData);
     }
   if ('Most Comments'==e.target.value)
-  { console.log(true);
+  { 
     const sortedData=displayData.sort((a, b) => b.comments.length - a.comments.length);
-    console.log(sortedData);
     const instaData=[...sortedData];
     setDisplayData(instaData);
    }
   if ('Least Comments'==e.target.value)
-   {   console.log(true);
+   {   
       const sortedData= displayData.sort((a, b) => a.comments.length - b.comments.length);
-      console.log(sortedData);
-    const instaData=[...sortedData];
-       setDisplayData(instaData);
+      const instaData=[...sortedData];
+      setDisplayData(instaData);
    }
       
 
@@ -122,6 +112,5 @@ const filterResults=(e)=>{
               </div>)            
 }
 
-//
 
 export default App;

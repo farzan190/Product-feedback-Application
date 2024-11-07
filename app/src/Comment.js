@@ -7,8 +7,7 @@ const Comment=({id,name,userName,content,replies,image})=>{
     
     const [reply,setReply]=useState();
     const [val,setVal]=useState("")
-    const {displayData,setDisplayData}=useContext(Cart);
-    const {originalData,setOriginalData}=useContext(Cart);    
+    const {originalData,setOriginalData,setDisplayData}=useContext(Cart);    
 
 
     const handleVal=(e)=>{
