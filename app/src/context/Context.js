@@ -16,9 +16,9 @@ const Cart=createContext();
    const [passingCategory,setpassingCategory]=useState("");
    const [passingDesc,setPassingDesc]=useState("");
    const [passingStat,setPassingStat]=useState("");
-   
+   const [status,setStatus]=useState("");
 
-    return (<Cart.Provider value={{passingStat,setPassingStat,passingDesc,setPassingDesc,selectedTab,setSelectedTab,displayData,setDisplayData,title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,passingTitle,setPassingTitle,passingCategory,setpassingCategory}} >
+    return (<Cart.Provider value={{status,setStatus,passingStat,setPassingStat,passingDesc,setPassingDesc,selectedTab,setSelectedTab,displayData,setDisplayData,title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,passingTitle,setPassingTitle,passingCategory,setpassingCategory}} >
        {children} 
     </Cart.Provider>)
 }

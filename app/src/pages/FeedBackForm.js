@@ -6,7 +6,7 @@ import addNewFeedBack from '../assets/icon-new-feedback.svg';
 
 
 const FeedBackForm=()=>{
-  const {title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,setDisplayData}=useContext(Cart);
+  const {title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,setDisplayData,status,setStatus}=useContext(Cart);
    const navigate=useNavigate();
  
     
@@ -18,7 +18,7 @@ const FeedBackForm=()=>{
         category: category,
         upvotes: 0,
         upvoted: false,
-        status: "suggestion",
+        status: status,
         description: detail,
         comments: [],
       };
@@ -62,6 +62,23 @@ const FeedBackForm=()=>{
     <option>Bug</option>
     </select>
     </div>
+
+
+    <div className="category-section"> 
+    <div className="cat"> FeedBack Status</div>
+    <div className="chooseACat">Choose feedback status</div>
+    <select className="categoryoptions" value={status} onChange={(e)=>setStatus(e.target.value)}> 
+    <option>planned</option>
+    <option>in-progress</option>
+    <option>live</option>
+    </select>
+    </div>
+
+
+
+
+
+
    <div className="feedback-detail">
    <div className="FD">FeedBack Detail</div>
    <div className="FD-desc">Include any specific comments on what should be improved, added, etc.</div>
