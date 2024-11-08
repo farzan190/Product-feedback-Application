@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Cart from "./Context";
-import CommentPage from "./CommentPage";
-import commentImg from "./assets/icon-comments.svg"
+import Cart from "../context/Context";
+import CommentPage from "../pages/CommentPage";
+import commentImg from "../assets/icon-comments.svg"
 
 const RoadmapTab=({id,roadmapline,title,description,category,upvotes,upvoted,commentslength})=>{
     const [vote,setVote]=useState(upvotes);

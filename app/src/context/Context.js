@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import data from './data';
+import data from '../data';
 
 
 const Cart=createContext();

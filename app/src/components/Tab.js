@@ -1,10 +1,9 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
-import Cart from "./Context";
-import CommentPage from "./CommentPage";
-import commentImg from "./assets/icon-comments.svg";
-import arrowUp from "./assets/icon-arrow-up.svg";
-
+import Cart from "../context/Context";
+import CommentPage from "../pages/CommentPage";
+import commentImg from "../assets/icon-comments.svg";
+import arrowUp from "../assets/icon-arrow-up.svg";
 
 const Tab=({id,title,description,category,upvotes,upvoted,commentslength})=>{
     const [vote,setVote]=useState(upvotes);

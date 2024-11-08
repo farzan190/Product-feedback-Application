@@ -1,17 +1,13 @@
 import './App.css';
-import Tab  from './Tab';
-import data from './data';
-import {useState} from "react";
-import FeedBackForm from './FeedBackForm';
-import FilterButtons from './FilterButtons';
+import Tab  from './components/Tab';
+import FilterButtons from './components/FilterButtons';
 import { useContext } from 'react';
 import {NavLink} from "react-router-dom";
-import Cart from './Context';
+import Cart from './context/Context';
 import suggestionIcon from './assets/icon-suggestion.svg';
 
 function App() {
   const {displayData,setDisplayData,originalData}=useContext(Cart);
-
 
 
 const setSortByHandler = (e) => {

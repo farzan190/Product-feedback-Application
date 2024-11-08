@@ -1,3 +1,4 @@
+
 const data=[{
     "currentUser": {
       "image": "./assets/user-images/image-zena.jpg",
@@ -125,7 +126,8 @@ const data=[{
               "image": "./assets/user-images/image-javier.jpg",
               "name": "Javier Pollard",
               "username": "warlikeduke"
-            }
+            },
+            "replies":[],
           },
           {
             "id": 11,
@@ -134,8 +136,10 @@ const data=[{
               "image": "./assets/user-images/image-roxanne.jpg",
               "name": "Roxanne Travis",
               "username": "peppersprime32"
-            }
-          }
+            },
+            "replies":[],
+          },
+          
         ]
       },
       {
@@ -206,7 +210,8 @@ const data=[{
               "image": "./assets/user-images/image-victoria.jpg",
               "name": "Victoria Mejia",
               "username": "arlen_the_marlin"
-            }
+            },
+            "replies":[],
           },
           {
             "id": 18,
@@ -215,7 +220,8 @@ const data=[{
               "image": "./assets/user-images/image-jackson.jpg",
               "name": "Jackson Barker",
               "username": "countryspirit"
-            }
+            },
+            "replies":[],
           }
         ]
       },
@@ -235,7 +241,8 @@ const data=[{
               "image": "./assets/user-images/image-george.jpg",
               "name": "George Partridge",
               "username": "soccerviewer8"
-            }
+            },
+            "replies":[],
           }
         ]
       },
@@ -255,7 +262,8 @@ const data=[{
               "image": "./assets/user-images/image-ryan.jpg",
               "name": "Ryan Welles",
               "username": "voyager.344"
-            }
+            },
+            "replies":[],
           }
         ]
       },

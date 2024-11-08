@@ -1,6 +1,4 @@
-import { useContext, useState } from "react";
-import Cart from "./Context";
-import Comment from "./Comment";
+import Comment from "../Comment";
 
 const CommentSection=({comments})=>{
 

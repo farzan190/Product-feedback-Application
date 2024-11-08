@@ -1,8 +1,8 @@
-import CommentSection from './CommentSection';
+import CommentSection from '../components/CommentSection';
 import { useState ,useContext} from 'react';
-import Cart from './Context';
+import Cart from '../context/Context';
 import { NavLink } from 'react-router-dom';
-import Tab  from './Tab';
+import Tab  from '../components/Tab';
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -66,7 +66,7 @@ const CommentPage=({id})=>{
                                                          <h3 className='AddComment'>Add Comment</h3>
                                                          <input type='text' className='input-comment' placeholder='Type your comment here' value={com} onChange={(e)=>setCom(e.target.value)} />
                                                          <button className='post-comment' onClick={()=>handlePostcomment(i.id)}>Post Comment</button>
-                                                        </div> 
+                                                        </div>
                                                            </div>
                                                         )
 
@@ -75,3 +75,4 @@ const CommentPage=({id})=>{
                 
 
 export default CommentPage;
+

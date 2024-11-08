@@ -1,8 +1,9 @@
 import { useState,useContext } from "react"
-import Cart from "./Context";
+import Cart from "../context/Context";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import addNewFeedBack from './assets/icon-new-feedback.svg';
+import addNewFeedBack from '../assets/icon-new-feedback.svg';
+
 
 const FeedBackForm=()=>{
   const {title,setTitle,category,setCategory,detail,setDetail,originalData,setOriginalData,setDisplayData}=useContext(Cart);

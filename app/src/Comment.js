@@ -1,7 +1,8 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import Cart from "./Context";
-import profilepic from './assets/user-images/image-zena.jpg'
+import Cart from "./context/Context";
+import profilepic from './assets/user-images/image-zena.jpg';
+
 
 const Comment=({id,name,userName,content,replies,image})=>{
     
@@ -11,10 +12,7 @@ const Comment=({id,name,userName,content,replies,image})=>{
 
 
     const handleVal=(e)=>{
-      console.log(e.target.value)
         setVal(e.target.value);
-        console.log(id);
-         
     }
     const handleReply=()=>{
         setReply(!reply);

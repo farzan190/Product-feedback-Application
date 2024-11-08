@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Cart from "./Context";
-import RoadmapTab from "./RoadmapTab";
+import Cart from "../context/Context";
+import RoadmapTab from "../components/RoadmapTab";
 import { NavLink } from "react-router-dom";
 
 const Roadmap=()=>{

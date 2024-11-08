@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import Cart from "./Context";
-import editfeedbackimg from './assets/icon-editfeedback/icon-edit-feedback.svg';
+import Cart from "../context/Context";
+import editfeedbackimg from '../assets/icon-editfeedback/icon-edit-feedback.svg';
 import { useNavigate } from "react-router-dom";
 
 const EditFeedBackPage=({description})=>{
