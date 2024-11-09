@@ -27,7 +27,7 @@ return (
       
        <div  className={roadmapline}></div>
        
-       <div className="right-tab">
+       <div className="roadmap-tab">
         <div className="dot-cat">
        <div className="road-dot"></div>
        <div className="road-category">{roadmapline}</div>

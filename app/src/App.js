@@ -33,8 +33,6 @@ const setSortByHandler = (e) => {
       const instaData=[...sortedData];
       setDisplayData(instaData);
    }
-      
-
    
 };
 

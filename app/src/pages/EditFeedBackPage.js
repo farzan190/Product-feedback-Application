@@ -61,7 +61,7 @@ const EditFeedBackPage=({description})=>{
 </select>
 </div>
 
-<div className="editfeedback-category">
+<div className="editfeedback-updateStatus">
 <div className="editfeedback-title">Update Status</div>
 <div className="editfeedback-description">Change feature state</div>
 <select className="feature-options" value={passingStat} onChange={(e)=>setPassingStat(e.target.value)} > 

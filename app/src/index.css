@@ -91,9 +91,19 @@
  margin-left: 40px;
  line-height: 26px;
  background-color: white;
-
 }
-
+.roadmap-tab{
+  display: flex;
+ flex-direction: column;
+ justify-content: flex-start;
+ align-items: flex-start;
+ margin-top: 30px;
+ line-height: 26px;
+ background-color: white;
+ overflow: hidden;
+ padding-left: 20px;
+ padding-right: 10px;
+}
 
 .left-tab{
   margin-left: 30px;
@@ -217,6 +227,7 @@ option{
   font-weight: 500;
   font-size: medium;
   margin-bottom: 10px;
+  padding-right: 10px;
 }
 
 .category{
@@ -341,7 +352,7 @@ option{
 .addfeedback-form{
   border-radius: 10px;
   margin: 50px auto;
- height: 100vh;
+ height: 117vh;
  width: 550px;
  display: flex;
  flex-direction: column;
@@ -395,7 +406,7 @@ input{
 }
 
 .categoryoptions{
-  width: 500px;
+  width: 547px;
   padding: 13px 24px;
   border-radius: 5px;
 }
@@ -687,8 +698,8 @@ small{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 500px;
+  align-items: flex-start;
+  width: 549px;
    margin-left: auto;
    margin-right: auto;
   margin-top: 190px;
@@ -705,9 +716,12 @@ small{
 .EF-heading{
   font-size: 1.5rem;
   line-height: 35px;
-  margin: 10px 0px 75px -200px;
+  margin-bottom: 75px;
   letter-spacing: -0.33px;
   font-weight: bold;
+  background-color: white;
+}
+.editfeedback-category{
   background-color: white;
 }
 
@@ -728,13 +742,12 @@ small{
   background-color: white;
 }
 .feature-options{
-  width: 500px;
+  width: 547px;
   padding: 13px 24px;
   border-radius: 5px;
 }
-.editfeedback-category{
+.editfeedback-updateStatus{
   background-color: white;
-  margin-left: -40px;
 }
 .editfeedback-img{
   display: flex;
@@ -742,8 +755,7 @@ small{
   align-items: flex-start;
   width: 70px;
   height: 70px;
-  background-color: white;
-  margin-left: -428px;
+  background-color: transparent;
   margin-top: -38px;
 }
 .delete{
@@ -835,7 +847,7 @@ h3{
   margin-bottom: 20px;
   margin-left: 20px;
   background-color: white;
-
+  overflow: hidden;
 }
 
 .lower-section{
@@ -845,7 +857,7 @@ h3{
   background-color: white;
   margin-top: 20px;
   width: 370px;
-  margin-left: 29px;
+  padding-left: 9px;
 }
 
 .roadmap-left-tab{
