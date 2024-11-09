@@ -14,7 +14,16 @@ This is a **Product Feedback App** built using **ReactJS** and **Context API**. 
 - **Category Selection**: Feedback is categorized (e.g., UI, UX, Features) to help organize the feedback.
 - **Upvoting/Downvoting**: Users can upvote or downvote feedback submitted by others to indicate which feedback is most important or valuable.
 - **Commenting**: Users can leave comments on the feedback submitted by others as well reply to others comments, encouraging interaction and discussion.
-- **Multiple Views**: Uses **React Router** for navigating between different views, such as the main feedback list, feedback details, and feedback submission forms.
+- **Sorting Options**: Users can sort feedback based on the number of comments (most or least) and upvotes (most or least), making it easier to find relevant feedback.
+- **Roadmap Dashboard**: The app includes a dedicated roadmap dashboard with three sections:
+  - **Planned**: Features that are in the planning stage.
+  - **In Progress**: Features currently being developed.
+  - **Live**: Features that have been implemented and are available to users.
+  
+  Users can track the status of features and update them as they move from "Planned" to "In Progress" to "Live."
+  
+- **Interactive Dashboard**: Users can interact with the roadmap by upvoting, downvoting, and commenting on features in any of the roadmap sections.
+- **Multiple Views**: Uses **React Router** for navigating between different views, such as the main feedback list, feedback details, and feedback submission forms , and the roadmap dashboard.
 
 ## Technologies Used
 
@@ -30,7 +39,7 @@ This is a **Product Feedback App** built using **ReactJS** and **Context API**. 
 1. Clone the repository to your local machine:
    ```bash
    git clone https://github.com/yourusername/product-feedback-app.git
-   cd product-feedback-app
+   cd app
    npm install
    npm start
 
