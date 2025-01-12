@@ -21,7 +21,7 @@ const CommentPage=({id})=>{
             "id": uuidv4(),
             "content": com,
             "user": {
-              "image": "./assets/user-images/image-suzanne.jpg",
+              "image": "user-images/image-suzanne.jpg",
               "name": "Suzanne Chang",
               "username": "upbeat1811"
             },

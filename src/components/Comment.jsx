@@ -1,14 +1,14 @@
 import { useContext, useState } from "react";
 import { v4 as uuidv4 } from 'uuid';
-import Cart from "./context/Context";
-import profilepic from './assets/user-images/image-zena.jpg';
+import Cart from "../context/Context";
+import profilepic from '../assets/user-images/image-zena.jpg';
 
 const Comment=({id,name,userName,content,replies,image})=>{
     
     const [reply,setReply]=useState();
     const [val,setVal]=useState("")
     const {originalData,setOriginalData,setDisplayData}=useContext(Cart);    
-    const correctImage=`"${image}"`;
+    
     
     const handleVal=(e)=>{
         setVal(e.target.value);
@@ -50,7 +50,8 @@ const Comment=({id,name,userName,content,replies,image})=>{
      
     return <div className="bcad">
     <div className="username-content">
-    <img src={require(`${image}`)} className="pro-pic" alt="profile-pic" />
+    <img src={require(`../assets/${image}`)} className="pro-pic" alt="profile-pic" />
+
     <div >
      <div className="nameReply"> 
     <div className="name-username">

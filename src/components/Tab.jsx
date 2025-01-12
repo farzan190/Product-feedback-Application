@@ -27,7 +27,7 @@ return <div className="single-tab" id={id} onClick={()=>handleTab()}>
       <div className="left-tab">
        <div className="upvote-button">
        <button className={isVoted?"vote":"didntVote"} onClick={(e)=>handleUpvote(e)}><div className="arrow-up"><img src={arrowUp} className="arrow-up"/></div>
-       <div className="vote-count">{vote}</div></button>
+       <div className="vote-count">{upvotes}</div></button>
       </div>
       </div>
       
