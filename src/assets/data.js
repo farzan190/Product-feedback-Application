@@ -51,7 +51,7 @@ const data=[{
             "id": 5,
             "content": "Also, please allow styles to be applied based on system preferences. I would love to be able to browse Frontend Mentor in the evening after my device’s dark mode turns on without the bright background it currently has.",
             "user": {
-              "image": "./assets/user-images/image-elijah.jpg",
+              "image": "../assets/user-images/image-elijah.jpg",
               "name": "Elijah Moss",
               "username": "hexagon.bestagon"
             },
@@ -61,7 +61,7 @@ const data=[{
             "id": 6,
             "content": "Second this! I do a lot of late night coding and reading. Adding a dark theme can be great for preventing eye strain and the headaches that result. It’s also quite a trend with modern apps and  apparently saves battery life.",
             "user": {
-              "image": "./assets/user-images/image-james.jpg",
+              "image": "../assets/user-images/image-james.jpg",
               "name": "James Skinner",
               "username": "hummingbird1"
             },
@@ -70,7 +70,7 @@ const data=[{
                 "content": "While waiting for dark mode, there are browser extensions that will also do the job. Search for 'dark theme' followed by your browser. There might be a need to turn off the extension for sites with naturally black backgrounds though.",
                 "replyingTo": "hummingbird1",
                 "user": {
-                  "image": "./assets/user-images/image-anne.jpg",
+                  "image": "../assets/user-images/image-anne.jpg",
                   "name": "Anne Valentine",
                   "username": "annev1990"
                 }
@@ -79,7 +79,7 @@ const data=[{
                 "content": "Good point! Using any kind of style extension is great and can be highly customizable, like the ability to change contrast and brightness. I'd prefer not to use one of such extensions, however, for security and privacy reasons.",
                 "replyingTo": "annev1990",
                 "user": {
-                  "image": "./assets/user-images/image-ryan.jpg",
+                  "image": "../assets/user-images/image-ryan.jpg",
                   "name": "Ryan Welles",
                   "username": "voyager.344"
                 }
@@ -101,7 +101,7 @@ const data=[{
             "id": 8,
             "content": "Much easier to get answers from devs who can relate, since they've either finished the challenge themselves or are in the middle of it.",
             "user": {
-              "image": "./assets/user-images/image-george.jpg",
+              "image": "../assets/user-images/image-george.jpg",
               "name": "George Partridge",
               "username": "soccerviewer8",
             },
@@ -123,7 +123,7 @@ const data=[{
             "id": 10,
             "content": "Right now, there is no ability to add images while giving feedback which isn't ideal because I have to use another app to show what I mean",
             "user": {
-              "image": "./assets/user-images/image-javier.jpg",
+              "image": "../assets/user-images/image-javier.jpg",
               "name": "Javier Pollard",
               "username": "warlikeduke"
             },
@@ -133,7 +133,7 @@ const data=[{
             "id": 11,
             "content": "Yes I'd like to see this as well. Sometimes I want to add a short video or gif to explain the site's behavior..",
             "user": {
-              "image": "./assets/user-images/image-roxanne.jpg",
+              "image": "../assets/user-images/image-roxanne.jpg",
               "name": "Roxanne Travis",
               "username": "peppersprime32"
             },

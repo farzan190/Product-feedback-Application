@@ -3,14 +3,13 @@ import { v4 as uuidv4 } from 'uuid';
 import Cart from "./context/Context";
 import profilepic from './assets/user-images/image-zena.jpg';
 
-
 const Comment=({id,name,userName,content,replies,image})=>{
     
     const [reply,setReply]=useState();
     const [val,setVal]=useState("")
     const {originalData,setOriginalData,setDisplayData}=useContext(Cart);    
-
-
+    const correctImage=`"${image}"`;
+    
     const handleVal=(e)=>{
         setVal(e.target.value);
     }
@@ -32,7 +31,7 @@ const Comment=({id,name,userName,content,replies,image})=>{
                     content: val,
                     replyingTo: userName,
                     user: {
-                      image: "./assets/user-images/image-anne.jpg",
+                      image: "../assets/user-images/image-anne.jpg",
                       name: "farzan",
                       username: "farzanitrate"
                     }

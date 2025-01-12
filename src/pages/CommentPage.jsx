@@ -6,7 +6,6 @@ import Tab  from '../components/Tab';
 import { v4 as uuidv4 } from 'uuid';
 
 
-
 const CommentPage=({id})=>{
   const {displayData,setDisplayData,selectedTab,setPassingTitle,setpassingCategory,setPassingDesc,setPassingStat,originalData,setOriginalData}=useContext(Cart);
   const [com,setCom]=useState("");  

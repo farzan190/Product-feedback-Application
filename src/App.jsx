@@ -1,4 +1,3 @@
-import './App.css';
 import Tab  from './components/Tab';
 import FilterButtons from './components/FilterButtons';
 import { useContext } from 'react';
